@@ -3,6 +3,8 @@
 
 $font-family-sans-serif: 'Lora', serif, italic;
 $navbar-margin-bottom: 0;
+$navbar-default-bg: $light-gray;
+$navbar-default-link-color: $coral;
 
 @import 'bootstrap';
 .jumbotron{
