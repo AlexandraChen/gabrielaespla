@@ -57,6 +57,15 @@ html, body {
   height: 350px;
   background-color: $light-gray;
   padding: 50px 0 50px 0;
+  .city{
+    text-align: right;
+    font-size: 32px;
+    color: $peach;
+  }
+  .statement{
+    text-align: justify;
+    font-size: 24px;
+  }
 }
 
 .contact-me{
@@ -73,7 +82,6 @@ html, body {
   background: black; 
   opacity: 0.20;
   position: absolute;
-
 }
 
 .contact-me-form{
