@@ -22,10 +22,12 @@
       <% end %>
     <% end %>
   </div>
-  <%= yield %>
-  <% unless current_page?("/") %>
-    <%= render partial: "layouts/footer" %>
-  <% end %>
+  <div class="wrapper">
+    <%= yield %>
+  </div>
+    <% unless current_page?("/") %>
+      <%= render partial: "layouts/footer" %>
+    <% end %>
 
 </body>
 </html>

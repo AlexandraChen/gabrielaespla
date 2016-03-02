@@ -6,6 +6,13 @@ html, body {
     padding: 0;
 }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  // margin: 0 auto -60px;
+}
+
 .in-construction-wrapper{
   background: url("/assets/sites/en_construccion.jpg");
   height: 100%;
