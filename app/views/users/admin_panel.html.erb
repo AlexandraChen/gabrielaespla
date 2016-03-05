@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Textos</h3>
+      <p><%= link_to "Agregar texto", new_text_path %></p>
+    </div>
+    <div class="panel-body admin-listing">
+      <% @texts.each do |text| %>
+        <li><%= link_to text.title, text_path(text.id) %>| ID <%= text.id %> | <%= link_to "Editar texto", edit_text_path(text.id) %>
+        </li> <br>
+      <% end %>
+    </div>
+  </div>
+</div>

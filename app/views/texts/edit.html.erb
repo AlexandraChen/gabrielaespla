@@ -1,0 +1,21 @@
+<div class="col-sm-6 col-sm-offset-3">
+<h1> Editar texto </h1>
+<br>
+  <%= form_for @text do |f| %>
+    <%= f.label "Título" %>
+    <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
+    <br>
+    <%= f.label "Texto" %>
+    <%= f.text_area :content, class: "form-control", placeholder: "Texto"%>
+    <br>
+    <%= f.label "Lugar" %>
+    <%= f.text_field :place, class: "form-control", placeholder: "Lugar" %>
+    <br>
+    <%= f.label "Fecha de publicación" %>
+    <%= f.date_field :published_date, class: "form-control", placeholder: "Fecha de publicación" %>
+    <br>
+    <%= f.submit "Editar texto", class: "btn btn-default col-sm-12"%>
+  <% end %>
+</div>
+
+

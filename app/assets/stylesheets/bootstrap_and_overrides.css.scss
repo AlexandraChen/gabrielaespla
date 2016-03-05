@@ -11,3 +11,8 @@ $navbar-default-link-color: $coral;
   text-align: center;
 }
 
+#flash-notice{
+  z-index: 9999;
+  position: absolute;
+  width:100%;
+}

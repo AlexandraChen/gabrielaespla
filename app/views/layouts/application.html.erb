@@ -12,22 +12,21 @@
   <% unless current_page?("/") %>
     <%= render partial: "layouts/header" %>
   <% end %>
-
-    <div class="container">
     <% flash.each do |name, msg| %>
       <% if alert %>
-        <%= content_tag(:div, msg, class:"alert alert-danger") %>
+        <%= content_tag(:div, msg, class:"alert alert-danger", id:"flash-notice") %>
       <% elsif notice %>
-        <%= content_tag(:div, msg, class:"alert alert-success") %>
+        <%= content_tag(:div, msg, class:"alert alert-success", id:"flash-notice") %>
       <% end %>
     <% end %>
-  </div>
-  <div class="wrapper">
+  <% unless current_page?("/") %>  
+    <div class="wrapper">
+  <% end %>
     <%= yield %>
   </div>
-    <% unless current_page?("/") %>
-      <%= render partial: "layouts/footer" %>
-    <% end %>
+  <% unless current_page?("/") %>
+    <%= render partial: "layouts/footer" %>
+  <% end %>
 
 </body>
 </html>

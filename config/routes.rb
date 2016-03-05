@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get "/logout", to: "devise/sessions#destroy", as: :signout
   end
 
-  get "/admin/panel"          => "sites#admin_panel"
+  get "/admin/panel"          => "users#admin_panel"
+  get "/textos"               => "texts#all_texts"
+  resources :texts, except: [:destroy]
 
 end
