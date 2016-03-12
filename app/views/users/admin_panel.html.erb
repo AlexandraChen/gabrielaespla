@@ -12,3 +12,18 @@
     </div>
   </div>
 </div>
+
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Obras</h3>
+      <p><%= link_to "Agregar obra", new_piece_path %></p>
+    </div>
+    <div class="panel-body admin-listing">
+      <% @pieces.each do |piece| %>
+        <li><%= link_to piece.title, piece_path(piece.id) %>| ID <%= piece.id %> | <%= link_to "Editar obra", edit_piece_path(piece.id) %>
+        </li> <br>
+      <% end %>
+    </div>
+  </div>
+</div>

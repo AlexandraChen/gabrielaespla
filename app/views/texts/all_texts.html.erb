@@ -10,7 +10,7 @@
       <div class="text">
         <% @texts.each do |text| %>
           <h1><%= text.title %></h1>
-          <% if current_user.admin? %>
+          <% if current_user && current_user.admin %>
             <%= link_to "Editar texto", edit_text_path(text.id), class:"pull-right" %>
           <% end %>
           <br>

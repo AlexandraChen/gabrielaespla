@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   get "/admin/panel"          => "users#admin_panel"
   get "/textos"               => "texts#all_texts"
   resources :texts, except: [:destroy]
+  resources :photos, except: [:destroy]
+  resources :pieces, except: [:destroy]
+  resources :projects, except: [:destroy]
 
 end
