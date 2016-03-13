@@ -1,6 +1,10 @@
 class PiecesController < ApplicationController
   def all_pieces
     @pieces = Piece.order("created_at DESC")
+    @drawing = Piece.where(piece_type:"Dibujo").first.photos.first
+    @performance = Piece.where(piece_type:"Performance").first.photos.first
+    @mural = Piece.where(piece_type:"Mural").first.photos.first
+    @painting = Piece.where(piece_type:"Pintura").first.photos.first
   end
   
   def show
@@ -51,7 +55,7 @@ class PiecesController < ApplicationController
 
   private
   def piece_params
-    params.require(:piece).permit(:title, :tech_spec, :measurement, :type, :published_date, :place)
+    params.require(:piece).permit(:title, :tech_spec, :measurement, :piece_type, :published_date, :place)
   end
 
   def photo_params

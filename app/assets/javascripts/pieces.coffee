@@ -1,3 +1,6 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $(".piece-tiles").mouseenter (e)->
+    $(e.currentTarget.children[0]).stop(true, true).fadeOut()
+
+  $(".piece-tiles").mouseleave (e)->
+    $(e.currentTarget.children[0]).stop(true, true).fadeIn();
