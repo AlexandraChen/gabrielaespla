@@ -27,3 +27,18 @@
     </div>
   </div>
 </div>
+
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Proyectos</h3>
+      <p><%= link_to "Agregar proyecto", new_project_path %></p>
+    </div>
+    <div class="panel-body admin-listing">
+      <% @projects.each do |project| %>
+        <li><%= link_to project.title, project_path(project.id) %>| ID <%= project.id %> | <%= link_to "Editar proyecto", edit_project_path(project.id) %>
+        </li> <br>
+      <% end %>
+    </div>
+  </div>
+</div>

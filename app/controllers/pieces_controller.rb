@@ -32,15 +32,16 @@ class PiecesController < ApplicationController
 
   def edit
     @piece = Piece.find(params[:id])
+    @photo = @piece.photos.first
   end
 
   def update
     @piece = Piece.find(params[:id])
     @piece.update_attributes(piece_params)
+    @photo = @piece.photos.first
     if current_user.admin?
-      if @piece.valid?
-        @piece.save
-        redirect_to admin_panel_path, notice: "obra editado exitosamente!"
+      if @piece.save
+        redirect_to admin_panel_path, notice: "Obra editada exitosamente!"
         return
       end
     end

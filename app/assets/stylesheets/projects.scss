@@ -1,0 +1,21 @@
+@import 'colors.scss';
+
+.project-details{
+  margin-top: 15px;
+}
+.description-specs{
+  height: auto;
+  width: 50%;
+  >p{
+    color: $silver;
+  }
+}
+
+
+.item>.project-img{
+  margin: auto;
+  max-height: 550px;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+}

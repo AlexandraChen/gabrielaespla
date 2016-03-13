@@ -1,4 +1,4 @@
- <div class="item-wrapper">
+<div class="item-wrapper">
    <div class="row">
      <div class="col-sm-8 col-sm-offset-2">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -12,7 +12,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <%= image_tag @piece.photos.first.img.url, class: "piece-img" %> 
+          <%= image_tag @project.photos.first.img.url, class: "project-img" %> 
         </div>
       </div>
 
@@ -30,14 +30,13 @@
     </div> 
 
 
-  <div class="row piece-details">
+  <div class="row project-details">
    <div class="col-sm-8 col-sm-offset-2">
-      <div class="tech-specs pull-right">  
-      <p><%= @piece.title %></p>
-      <p>Técnica: <%= @piece.tech_spec %></p>
-      <p>Medidas: <%= @piece.measurement %></p>
-      <p>Lugar: <%= @piece.place %></p>
-      <p>Fecha: <%= @piece.published_date %></p>
+      <div class="description-specs pull-right">  
+      <p><%= @project.title %></p>
+      <p>Técnica: <%= @project.tech_spec %></p>
+      <p>Descripción: <%= @project.description %></p>
+      <p>Fecha: <%= @project.published_date %></p>
       </div>  
     </div> 
   </div> 
