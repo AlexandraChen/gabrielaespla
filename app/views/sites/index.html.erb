@@ -6,7 +6,11 @@
     <div class="outer r4x3">
         <div class="inner">
           <% @index_photos.each do |x| %>
-            <a class="tiles">
+            <% if x.model_name.name == "Project" %>
+              <a href="<%= project_path(x.id) %>" class="tiles">
+            <% elsif x.model_name == "Piece" %>
+              <a href="<%= piece_path(x.id) %>" class="tiles">
+            <% end %>
               <div class="tiles-overlay">
                 <p> <%= x.title %> </p>
               </div>
