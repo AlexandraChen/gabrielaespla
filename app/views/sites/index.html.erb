@@ -5,15 +5,11 @@
 <div class="container index-tiles-wrapper">
     <div class="outer r4x3">
         <div class="inner">
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
-            <div class="tiles"></div>
+          <% @index_photo.each do |x| %>
+            <a class="tiles">
+              <%= image_tag x.img.url %>
+            </a>
+          <% end %>
         </div>
     </div>
 </div>
