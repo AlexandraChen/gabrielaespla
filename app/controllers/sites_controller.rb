@@ -3,6 +3,6 @@ class SitesController < ApplicationController
   end
 
   def index
-    @index_photo = Photo.take(9)
+    @index_photo = Photo.offset(rand(Photo.count)).take(9)
   end
 end
