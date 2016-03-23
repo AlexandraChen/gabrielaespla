@@ -80,14 +80,14 @@ html, body {
 
 /* example content */
 .tiles {
-    float: left;
-    width: 33.333%;
-    height: 33.333%;
-    >img{
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-    }
+  float: left;
+  width: 33.333%;
+  height: 33.333%;
+  >img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  }
 }
 
 /* just for display purposes... */
