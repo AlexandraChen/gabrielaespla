@@ -35,14 +35,6 @@ html, body {
   position: absolute;
 }
 
-// .index-panel{
-//   width: 100%;
-//   height: 600px;
-//   background-image: url("/assets/sites/el_arbol_el_aguila_los_cuerpos_desnudos.jpg");
-//   background-position: center;
-//   background-size: cover;
-// }
-
 .index-banner{
   position: relative;
   width: 100%;   /* desired width */
@@ -80,14 +72,17 @@ html, body {
 }
 
 /* example content */
-.tiles {
+.tiles{
   float: left;
   width: 33.333%;
   height: 33.333%;
   >img{
   width: 100%;
+  max-height: 100%;
   object-fit: cover;
   object-position: center center;
+  z-index: 1;
+  overflow: hidden;
   }
 }
 
@@ -97,6 +92,23 @@ html, body {
   position: absolute;
   left:0;
   top: -1em;
+}
+
+.tiles-overlay{
+  background-color: $coral; 
+  opacity: 0.9;
+  position: absolute;
+  z-index: 2;
+  width: 33.333%;
+  height: 33.333%;
+  visibility: hidden;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; 
+  >p{
+    color:white;
+    font-size: 200%;
+  }
 }
 
 .artist-statement{
@@ -140,7 +152,7 @@ html, body {
 
 .navbar-media>div>i{
   font-size: 2.0rem;
-  margin-top: 0.65rem;
+  margin-top: 0.6rem;
   color: $coral;
 }
 

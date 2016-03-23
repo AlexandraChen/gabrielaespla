@@ -1,0 +1,6 @@
+<div class="container">
+  <% @drawings.each do |drawing| %>
+    <%= link_to drawing.title, piece_path(drawing.id) %>
+    <br>
+  <% end %>
+</div>

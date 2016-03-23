@@ -7,19 +7,19 @@ class PiecesController < ApplicationController
     @painting = Piece.where(piece_type:"Pintura").first.photos.first
   end
   
-  def all_drawings
+  def drawings
     @drawings = Piece.where(piece_type:"Dibujo")
   end
 
-  def all_murals
+  def murals
     @murals = Piece.where(piece_type:"Mural")
   end
 
-  def all_performances
+  def performances
     @performances = Piece.where(piece_type:"Performance")
   end
 
-  def all_paintings
+  def paintings
     @paintings = Piece.where(piece_type:"Pintura")
   end
 

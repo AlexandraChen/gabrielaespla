@@ -1,0 +1,6 @@
+<div class="container">
+  <% @murals.each do |mural| %>
+    <%= link_to mural.title, piece_path(mural.id) %>
+    <br>
+  <% end %>
+</div>

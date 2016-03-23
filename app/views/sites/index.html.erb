@@ -5,9 +5,12 @@
 <div class="container index-tiles-wrapper">
     <div class="outer r4x3">
         <div class="inner">
-          <% @index_photo.each do |x| %>
+          <% @index_photos.each do |x| %>
             <a class="tiles">
-              <%= image_tag x.img.url %>
+              <div class="tiles-overlay">
+                <p> <%= x.title %> </p>
+              </div>
+              <%= image_tag x.photos.first.img.url %>
             </a>
           <% end %>
         </div>
@@ -22,17 +25,4 @@
     <p>
   </div>
 </div>
-<div class="contact-me">
-  <div class="contact-me-overlay">
-  </div>
-  <div class="container">
-    <div class="col-sm-6 contact-me-form">
-      <h3>Nombre</h3>
-      <input type="text" name="fname" class="form-control"><br>
-      <h3>Email</h3>
-      <input type="text" name="fname" class="form-control"><br>
-      <h3>Mensaje</h3>
-      <textarea as="text" name="fname" class="form-control"></textarea><br>
-    </div>
-  </div>
-</div>
+<%= render partial: 'sites/contact_me' %>

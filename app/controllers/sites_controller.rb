@@ -3,6 +3,20 @@ class SitesController < ApplicationController
   end
 
   def index
-    @index_photo = Photo.all.shuffle[0..8]
+    @index_photos = []
+
+    Piece.all.shuffle[0..6].each do |x|
+      @index_photos << x
+    end
+
+    Project.all.shuffle[0..2].each do |x|
+      @index_photos << x
+    end
+
+    @index_photos.shuffle
+    end
+
+  def contact_me
+
   end
 end

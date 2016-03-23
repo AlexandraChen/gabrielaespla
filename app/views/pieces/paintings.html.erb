@@ -1,0 +1,6 @@
+<div class="container">
+  <% @paintings.each do |painting| %>
+    <%= link_to painting.title, piece_path(painting.id) %>
+    <br>
+  <% end %>
+</div>

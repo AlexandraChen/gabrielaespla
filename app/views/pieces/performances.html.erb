@@ -1,0 +1,6 @@
+<div class="container">
+  <% @performances.each do |performance| %>
+    <%= link_to performance.title, piece_path(performance.id) %>
+    <br>
+  <% end %>
+</div>
