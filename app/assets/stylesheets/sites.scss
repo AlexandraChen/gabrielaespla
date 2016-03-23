@@ -1,4 +1,5 @@
 @import 'colors.scss';
+
 html, body {
     height: 100%;
     width: 100%;
@@ -61,21 +62,21 @@ html, body {
 }
 
 .outer {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .outer.r4x3 {
-    padding-top: 75%; /* "height" will be 3/4 of width */
+  padding-top: 75%; /* "height" will be 3/4 of width */
 }
 
 /* inner container positioned absolutely and holds content */
 .outer .inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* example content */
@@ -92,10 +93,10 @@ html, body {
 
 /* just for display purposes... */
 .inner::after {
-    content: attr(data-size);
-    position: absolute;
-    left:0;
-    top: -1em;
+  content: attr(data-size);
+  position: absolute;
+  left:0;
+  top: -1em;
 }
 
 .artist-statement{
