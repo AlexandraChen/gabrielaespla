@@ -7,6 +7,22 @@ class PiecesController < ApplicationController
     @painting = Piece.where(piece_type:"Pintura").first.photos.first
   end
   
+  def all_drawings
+    @drawings = Piece.where(piece_type:"Dibujo")
+  end
+
+  def all_murals
+    @murals = Piece.where(piece_type:"Mural")
+  end
+
+  def all_performances
+    @performances = Piece.where(piece_type:"Performance")
+  end
+
+  def all_paintings
+    @paintings = Piece.where(piece_type:"Pintura")
+  end
+
   def show
     @piece = Piece.find(params[:id])
   end
@@ -27,7 +43,7 @@ class PiecesController < ApplicationController
     if @piece.save
       @photo.piece_id = @piece.id
       @photo.save
-      redirect_to admin_panel_path, notice: "Nuevo obra creado exitosamente!" 
+      redirect_to admin_panel_path, notice: "Nuevo obra creada exitosamente!" 
     else
       flash[:notice] = "Hubo un error al crear la obra."
       render :new

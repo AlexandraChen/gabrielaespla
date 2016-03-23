@@ -10,7 +10,13 @@ Rails.application.routes.draw do
 
   get "/admin/panel"          => "users#admin_panel"
   get "/textos"               => "texts#all_texts"
-  get "/obras"               => "pieces#all_pieces"
+  get "/obras"                => "pieces#all_pieces"
+  get "/obras/dibujos"        => "pieces#all_drawings"
+  get "/obras/murales"        => "pieces#all_murals"
+  get "/obras/pinturas"       => "pieces#all_paintings"
+  get "/obras/performances"   => "pieces#all_performances"
+  get "/proyectos"            => "projects#all_projects"
+
   resources :texts, except: [:destroy]
   resources :photos, except: [:destroy]
   resources :pieces, except: [:destroy]

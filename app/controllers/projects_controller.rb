@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  def all_Project
-    @project = Project.order("created_at DESC")
+  def all_projects
+    @projects = Project.order("created_at DESC")
   end
   
   def show
@@ -51,7 +51,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :tech_spec, :description, :published_date, :place)
+    params.require(:project).permit(:title, :description, :published_date, :place)
   end
 
   def photo_params
