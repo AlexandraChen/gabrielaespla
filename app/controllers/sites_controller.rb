@@ -5,11 +5,11 @@ class SitesController < ApplicationController
   def index
     @index_photos = []
 
-    Piece.all.shuffle[0..6].each do |x|
+    Piece.all.shuffle[0..5].each do |x|
       @index_photos << x
     end
 
-    Project.all.shuffle[0..3].each do |x|
+    Project.all.shuffle[0..2].each do |x|
       @index_photos << x
     end
 
