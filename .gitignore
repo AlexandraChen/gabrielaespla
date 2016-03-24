@@ -16,3 +16,6 @@
 
 # Ignore public files
 /public/system
+
+# Ignore public assets
+public/assets/**
