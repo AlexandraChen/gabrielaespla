@@ -17,7 +17,11 @@
         <li><%= link_to "Obras", obras_path %></li>
         <li><%= link_to "Textos", textos_path %></li>
         <li><%= link_to "Bio", bio_path %></li>
-        <li><%= link_to "Contáctame", contactame_path %></li>
+        <% if current_page?("/") %>
+          <li><a href="#contact-me"> Contáctame </a></li>
+        <% else %>
+          <li><%= link_to "Contáctame", contactame_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

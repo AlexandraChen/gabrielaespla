@@ -13953,9 +13953,20 @@ return jQuery;
         visibility: "visible"
       });
     });
-    return $(".tiles").mouseleave(function(e) {
+    $(".tiles").mouseleave(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "hidden"
+      });
+    });
+    return $('a[href^="#contact-me"]').on('click', function(e) {
+      var $target, target;
+      e.preventDefault();
+      target = this.hash;
+      $target = $(target);
+      return $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 500, 'swing', function() {
+        return window.location.hash = target;
       });
     });
   });

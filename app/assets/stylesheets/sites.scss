@@ -5,6 +5,11 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background: url("/assets/sites/main_pic.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .wrapper {
@@ -13,11 +18,11 @@ html, body {
   height: 100%;
 }
 
-.in-construction-wrapper{
-  background: url("/assets/sites/en_construccion.jpg");
-  height: 100%;
-  background-size: cover;
-}
+// .in-construction-wrapper{
+//   background: url("/assets/sites/en_construccion.jpg");
+//   height: 100%;
+//   background-size: cover;
+// }
 
 .jumbotron.in-construction{
   background: transparent;
@@ -43,9 +48,9 @@ html, body {
   content: "";
   display: block;
   padding-top: 50%;  /* initial ratio of 1:1*/
-  background-image: url("/assets/sites/main_pic.jpg");
-  background-position: center;
-  background-size: cover;
+  // background-image: url("/assets/sites/main_pic.jpg");
+  // background-position: center;
+  // background-size: cover;
 }
 
 .outer {
@@ -126,7 +131,7 @@ html, body {
   width: 100%;
   height: auto;
   // background: url("/assets/sites/contact_me.jpg");
-  background-color: $coral;
+  // background-color: $coral;
   background-size: cover;
   background-position: center;
 }
