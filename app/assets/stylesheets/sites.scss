@@ -130,7 +130,8 @@ html, body {
 .contact-me{
   width: 100%;
   height: auto;
-  background: url("/assets/sites/contact_me.jpg");
+  // background: url("/assets/sites/contact_me.jpg");
+  background-color: $coral;
   background-size: cover;
   background-position: center;
 }
@@ -146,8 +147,15 @@ html, body {
 .contact-me-form{
   margin: 20px 0 20px 0;
   h3{
-    color: $coral;
+    color: $light-gray;
   }
+}
+
+.contact-me-info{
+  color: $light-gray;
+  height: 100%;
+  text-align: right;
+  margin-top: 13.5%;
 }
 
 .navbar-media>div>i{
