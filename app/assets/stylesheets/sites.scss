@@ -1,17 +1,20 @@
 @import 'colors.scss';
 
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: url("/assets/sites/main_pic.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/sites/main_pic.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+.wrapper{
+  background-color: #fff;
+}
 .scrollup {
   width: 3em;
   height: 3em;
@@ -52,31 +55,42 @@ html, body {
 .index-banner{
   position: relative;
   width: 100%;   /* desired width */  
-  height: 50%;
+  height: 100%;
   padding-bottom: 40%;
   text-align: center;
-  padding: 7.5% 0;
-   >h1{
-    color: $light-gray;
-    text-align: center;
-    padding: 15% 0;
-  }
-  >#more-about-me{
-    height: 50px;
-    width: 200px;
-    border: 3px solid $peach;
-    color: #fff;
-    padding: 13px;
-    text-align: center;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    &:hover{
+   .main-content{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    color: white;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+    overflow: auto;
+    z-index: 3;
+    >h1{
+        color: $light-gray;
+        
+      }
+    >#more-about-me{
+      height: 50px;
+      width: 200px;
       border: 3px solid $peach;
-      background-color: $coral;
-      text-decoration: none;
-    }
-    &:hover, &:active{
-      text-decoration: none;
+      color: #fff;
+      padding: 13px;
+      text-align: center;
+      letter-spacing: 1.5px;
+      display: inline-block;
+      margin-top: 5%;
+      &:hover{
+        border: 3px solid $peach;
+        background-color: $coral;
+        text-decoration: none;
+      }
+      &:hover, &:active{
+        text-decoration: none;
+      }
     }
   }
 }
@@ -205,12 +219,11 @@ html, body {
   text-align: center;
   letter-spacing: 1.5px;
   display: inline-block;
-  background-color: $coral;
   margin: 1em 0 3em 0;
   &:hover{
-    border: 3px solid $coral;
-    background-color: $peach;
-    color: $coral;
+    border: 3px solid $peach;
+    background-color: $coral;
+    color: $light-gray;
     text-decoration: none;
   }
   &:hover, &:active{

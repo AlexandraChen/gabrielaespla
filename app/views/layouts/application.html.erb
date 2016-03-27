@@ -17,10 +17,9 @@
       <%= content_tag(:div, msg, class:"alert alert-success", id:"flash-notice") %>
     <% end %>
   <% end %>
-  <div class="wrapper">
-    <%= yield %>
-    <a href="#" class="scrollup">Scroll</a>
-  </div>
+  <%= yield %>
+  <a href="#" class="scrollup">Scroll</a>
+  </div> <!-- wrapper close tag -->
   <%= render partial: "layouts/footer" %>
 </body>
 </html>
