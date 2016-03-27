@@ -13948,6 +13948,19 @@ return jQuery;
     $("#flash-notice").on("click", function() {
       return $(this).fadeOut();
     });
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('.scrollup').fadeIn();
+      } else {
+        $('.scrollup').fadeOut();
+      }
+    });
+    $('.scrollup').click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 900);
+      return false;
+    });
     $(".tiles").mouseenter(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "visible"
@@ -13958,7 +13971,7 @@ return jQuery;
         visibility: "hidden"
       });
     });
-    return $('a[href^="#contact-me"]').on('click', function(e) {
+    return $('a[href^="#contact-me"], a[href^="#who-am-i"]').on('click', function(e) {
       var $target, target;
       e.preventDefault();
       target = this.hash;

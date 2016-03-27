@@ -12,17 +12,24 @@ html, body {
     background-size: cover;
 }
 
+.scrollup {
+  width: 3em;
+  height: 3em;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 5em;
+  right: 100px;  
+  display: none;
+  text-indent: -9999px;
+  background: url('sites/icon_top.png') no-repeat;
+  background-size: 100%;
+}
+
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
 }
-
-// .in-construction-wrapper{
-//   background: url("/assets/sites/en_construccion.jpg");
-//   height: 100%;
-//   background-size: cover;
-// }
 
 .jumbotron.in-construction{
   background: transparent;
@@ -33,24 +40,64 @@ html, body {
   color: #fff;
 }
 
-.overlay{ width: 100%;
+.overlay{ 
+  width: 100%;
   height: 100%;
   background: black; 
   opacity: 0.30;
   position: absolute;
+  z-index: 2;
 }
 
 .index-banner{
   position: relative;
-  width: 100%;   /* desired width */
+  width: 100%;   /* desired width */  
+  height: 50%;
+  padding-bottom: 40%;
+  text-align: center;
+  padding: 7.5% 0;
+   >h1{
+    color: $light-gray;
+    text-align: center;
+    padding: 15% 0;
+  }
+  >#more-about-me{
+    height: 50px;
+    width: 200px;
+    border: 3px solid $peach;
+    color: #fff;
+    padding: 13px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    &:hover{
+      border: 3px solid $peach;
+      background-color: $coral;
+      text-decoration: none;
+    }
+    &:hover, &:active{
+      text-decoration: none;
+    }
+  }
 }
-.index-banner:before{
-  content: "";
-  display: block;
-  padding-top: 50%;  /* initial ratio of 1:1*/
-  // background-image: url("/assets/sites/main_pic.jpg");
-  // background-position: center;
-  // background-size: cover;
+.artist-statement{
+  width: 100%;
+  height: auto;
+  background-color: $light-gray;
+  padding: 50px 0 50px 0;
+  .city{
+    text-align: right;
+    font-size: 4rem;
+    color: $peach;
+  }
+  .statement{
+    text-align: justify;
+    font-size: 2.5rem;
+  }
+}
+
+.index-tiles-wrapper{
+  background-color: $peach;
 }
 
 .outer {
@@ -111,29 +158,10 @@ html, body {
   }
 }
 
-.artist-statement{
-  width: 100%;
-  height: auto;
-  background-color: $light-gray;
-  padding: 50px 0 50px 0;
-  .city{
-    text-align: right;
-    font-size: 4rem;
-    color: $peach;
-  }
-  .statement{
-    text-align: justify;
-    font-size: 2.5rem;
-  }
-}
-
 .contact-me{
   width: 100%;
   height: auto;
-  // background: url("/assets/sites/contact_me.jpg");
-  // background-color: $coral;
-  background-size: cover;
-  background-position: center;
+  text-align: center;
 }
 
 .contact-me-overlay{
@@ -145,17 +173,49 @@ html, body {
 }
 
 .contact-me-form{
-  margin: 20px 0 20px 0;
-  h3{
-    color: $light-gray;
+  margin-top: 2em;
+  color: $light-gray;
+  p.say-hi{
+    font-size: 3em;
+    text-align: left;
+  }
+  .contact-input{
+    opacity: 0.7;
+  }
+  textarea.form-control.contact-input{
+    height: 200px;
   }
 }
 
 .contact-me-info{
   color: $light-gray;
   height: 100%;
-  text-align: right;
-  margin-top: 13.5%;
+  text-align: center;
+  p{
+    font-size: 2em;
+  }
+}
+
+.submit-btn.msg{
+  height: 50px;
+  width: 200px;
+  border: 3px solid $peach;
+  color: #fff;
+  padding: 13px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  background-color: $coral;
+  margin: 1em 0 3em 0;
+  &:hover{
+    border: 3px solid $coral;
+    background-color: $peach;
+    color: $coral;
+    text-decoration: none;
+  }
+  &:hover, &:active{
+    text-decoration: none;
+  }
 }
 
 .navbar-media>div>i{

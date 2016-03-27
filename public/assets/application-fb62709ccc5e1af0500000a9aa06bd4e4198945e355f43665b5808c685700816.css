@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption);
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1718,7 +1718,7 @@ html {
 
 /* line 27, /Users/AlexandraChen1/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Lora", serif, italic;
+  font-family: "PT Sans Caption", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -7860,7 +7860,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Lora", serif, italic;
+  font-family: "PT Sans Caption", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7998,7 +7998,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Lora", serif, italic;
+  font-family: "PT Sans Caption", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -8945,13 +8945,27 @@ html, body {
 }
 
 /* line 15, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.scrollup {
+  width: 3em;
+  height: 3em;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 5em;
+  right: 100px;
+  display: none;
+  text-indent: -9999px;
+  background: url("sites/icon_top.png") no-repeat;
+  background-size: 100%;
+}
+
+/* line 28, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
 }
 
-/* line 27, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 34, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .jumbotron.in-construction {
   background: transparent;
   transform: translateY(50%);
@@ -8961,44 +8975,92 @@ html, body {
   color: #fff;
 }
 
-/* line 36, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 43, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .overlay {
   width: 100%;
   height: 100%;
   background: black;
   opacity: 0.30;
   position: absolute;
+  z-index: 2;
 }
 
-/* line 43, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 52, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .index-banner {
   position: relative;
   width: 100%;
   /* desired width */
+  height: 50%;
+  padding-bottom: 40%;
+  text-align: center;
+  padding: 7.5% 0;
+}
+/* line 59, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.index-banner > h1 {
+  color: #F9F9F9;
+  text-align: center;
+  padding: 15% 0;
+}
+/* line 64, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.index-banner > #more-about-me {
+  height: 50px;
+  width: 200px;
+  border: 3px solid #f6cdb9;
+  color: #fff;
+  padding: 13px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+/* line 73, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.index-banner > #more-about-me:hover {
+  border: 3px solid #f6cdb9;
+  background-color: #eea097;
+  text-decoration: none;
+}
+/* line 78, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.index-banner > #more-about-me:hover, .index-banner > #more-about-me:active {
+  text-decoration: none;
 }
 
-/* line 47, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.index-banner:before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-  /* initial ratio of 1:1*/
+/* line 83, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.artist-statement {
+  width: 100%;
+  height: auto;
+  background-color: #F9F9F9;
+  padding: 50px 0 50px 0;
+}
+/* line 88, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.artist-statement .city {
+  text-align: right;
+  font-size: 4rem;
+  color: #f6cdb9;
+}
+/* line 93, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.artist-statement .statement {
+  text-align: justify;
+  font-size: 2.5rem;
 }
 
-/* line 56, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 99, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.index-tiles-wrapper {
+  background-color: #f6cdb9;
+}
+
+/* line 103, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .outer {
   position: relative;
   width: 100%;
 }
 
-/* line 61, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 108, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .outer.r4x3 {
   padding-top: 75%;
   /* "height" will be 3/4 of width */
 }
 
 /* inner container positioned absolutely and holds content */
-/* line 66, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 113, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .outer .inner {
   position: absolute;
   top: 0;
@@ -9008,13 +9070,13 @@ html, body {
 }
 
 /* example content */
-/* line 75, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 122, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .tiles {
   float: left;
   width: 33.333%;
   height: 33.333%;
 }
-/* line 79, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 126, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .tiles > img {
   width: 100%;
   height: 100%;
@@ -9025,7 +9087,7 @@ html, body {
 }
 
 /* just for display purposes... */
-/* line 90, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 137, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .inner::after {
   content: attr(data-size);
   position: absolute;
@@ -9033,7 +9095,7 @@ html, body {
   top: -1em;
 }
 
-/* line 97, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 144, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .tiles-overlay {
   background-color: #eea097;
   opacity: 0.9;
@@ -9047,40 +9109,20 @@ html, body {
   /* align horizontal */
   align-items: center;
 }
-/* line 108, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 155, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .tiles-overlay p {
   color: white;
   font-size: 200%;
 }
 
-/* line 114, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.artist-statement {
-  width: 100%;
-  height: auto;
-  background-color: #F9F9F9;
-  padding: 50px 0 50px 0;
-}
-/* line 119, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.artist-statement .city {
-  text-align: right;
-  font-size: 4rem;
-  color: #f6cdb9;
-}
-/* line 124, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.artist-statement .statement {
-  text-align: justify;
-  font-size: 2.5rem;
-}
-
-/* line 130, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 161, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .contact-me {
   width: 100%;
   height: auto;
-  background-size: cover;
-  background-position: center;
+  text-align: center;
 }
 
-/* line 139, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 167, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .contact-me-overlay {
   width: 100%;
   height: auto;
@@ -9089,31 +9131,69 @@ html, body {
   position: absolute;
 }
 
-/* line 147, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 175, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .contact-me-form {
-  margin: 20px 0 20px 0;
-}
-/* line 149, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.contact-me-form h3 {
+  margin-top: 2em;
   color: #F9F9F9;
 }
+/* line 178, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.contact-me-form p.say-hi {
+  font-size: 3em;
+  text-align: left;
+}
+/* line 182, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.contact-me-form .contact-input {
+  opacity: 0.7;
+}
+/* line 185, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.contact-me-form textarea.form-control.contact-input {
+  height: 200px;
+}
 
-/* line 154, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 190, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .contact-me-info {
   color: #F9F9F9;
   height: 100%;
-  text-align: right;
-  margin-top: 13.5%;
+  text-align: center;
+}
+/* line 194, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.contact-me-info p {
+  font-size: 2em;
 }
 
-/* line 161, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 199, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.submit-btn.msg {
+  height: 50px;
+  width: 200px;
+  border: 3px solid #f6cdb9;
+  color: #fff;
+  padding: 13px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  background-color: #eea097;
+  margin: 1em 0 3em 0;
+}
+/* line 210, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.submit-btn.msg:hover {
+  border: 3px solid #eea097;
+  background-color: #f6cdb9;
+  color: #eea097;
+  text-decoration: none;
+}
+/* line 216, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+.submit-btn.msg:hover, .submit-btn.msg:active {
+  text-decoration: none;
+}
+
+/* line 221, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .navbar-media > div > i {
   font-size: 2.0rem;
   margin-top: 0.6rem;
   color: #eea097;
 }
 
-/* line 167, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 227, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .navbar-media > div {
   border: 0.3rem solid #cdcdcd;
   border-radius: 50%;
@@ -9123,7 +9203,7 @@ html, body {
   display: inline-block;
 }
 
-/* line 176, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 236, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer {
   text-align: center;
   width: 100%;
@@ -9132,32 +9212,32 @@ footer {
   border-top: 0.3rem solid #eea097;
   background-color: #F9F9F9;
 }
-/* line 183, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 243, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer p#footer-sign {
   color: #777;
   margin-top: 2.8rem;
   width: 100%;
   font-weight: bold;
 }
-/* line 189, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 249, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer a:hover {
   text-decoration: none;
 }
-/* line 192, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 252, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer ul {
   list-style-type: none;
 }
-/* line 196, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 256, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer .footer-links {
   text-align: left;
   padding-top: 2rem;
 }
-/* line 200, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 260, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer .footer-links > div > ul > a {
   color: #aaaaaa;
   padding-right: 1.5rem;
 }
-/* line 204, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+/* line 264, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 footer .footer-links > div > ul > a:hover {
   color: #bbb;
 }
