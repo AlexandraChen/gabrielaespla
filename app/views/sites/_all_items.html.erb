@@ -1,0 +1,31 @@
+<div class="all-items-wrapper">
+  <div class="container all-items">
+    <a href="/proyectos" class="col-sm-3 item-tiles">  
+    <div class="item-overlay">
+    </div>
+      <%= image_tag @drawing.img.url  %>
+      <p> PROYECTOS </p>
+    </a>
+
+    <a href="/obras"class="col-sm-3 item-tiles">
+      <div class="item-overlay">
+      </div>
+      <p> OBRAS </p>
+      <%= image_tag @performance.img.url  %>
+    </a>
+
+    <a href="/textos" class="col-sm-3 item-tiles">
+      <div class="item-overlay">
+      </div>
+      <p> TEXTOS </p>
+      <%= image_tag @mural.img.url  %>
+    </a>
+
+    <a href="/bio" class="col-sm-3 item-tiles">
+    <div class="item-overlay">
+    </div>
+      <p> BIO </p>
+      <%= image_tag @painting.img.url  %>
+    </a>
+  </div>
+</div>

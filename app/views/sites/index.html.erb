@@ -1,8 +1,9 @@
 <div class="index-banner"> 
 <div class="overlay"></div>
 <div class="main-content">
-   <h1>Gabriela Esplá<br>Artista plástica</h1>
-   <a id="more-about-me" href="#who-am-i"> Conóceme </a>
+   <h1>Gabriela Esplá</h1>
+   <h2>artista</h2>
+   <a id="more-about-me" href="#who-am-i"> Pintar como una excusa </a>
 </div>
  
   <!-- <div class="content"></div>  -->
@@ -17,23 +18,6 @@
   </div>
 </div>
 
-<div class="index-tiles-wrapper">
-    <div class="outer r4x3">
-        <div class="inner">
-          <% @index_photos.each do |x| %>
-            <% if x.model_name.name == "Project" %>
-              <a href="<%= project_path(x.id) %>" class="tiles">
-            <% elsif x.model_name == "Piece" %>
-              <a href="<%= piece_path(x.id) %>" class="tiles">
-            <% end %>
-              <div class="tiles-overlay">
-                <p> <%= x.title %> </p>
-              </div>
-              <%= image_tag x.photos.first.img.url %>
-            </a>
-          <% end %>
-        </div>
-    </div>
-</div>
+<%= render partial: 'sites/all_items' %>
 
 <%= render partial: 'sites/contact_me' %>

@@ -1,0 +1,16 @@
+@import 'colors.scss';
+
+.bio-pic{
+  width: 100%;
+}
+
+.text-wrapper{
+  background-color: $light-gray;
+  opacity: 0.9;
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 25px;
+  p{
+    font-size: 20px;
+  }
+}

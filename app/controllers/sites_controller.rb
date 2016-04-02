@@ -3,18 +3,12 @@ class SitesController < ApplicationController
   end
 
   def index
-    @index_photos = []
-
-    Piece.all.shuffle[0..5].each do |x|
-      @index_photos << x
-    end
-
-    Project.all.shuffle[0..2].each do |x|
-      @index_photos << x
-    end
-
-    @index_photos.shuffle
-    end
+    @pieces = Piece.order("created_at DESC")
+    @drawing = Piece.where(piece_type:"Dibujo").first.photos.first
+    @performance = Piece.where(piece_type:"Performance").first.photos.first
+    @mural = Piece.where(piece_type:"Mural").first.photos.first
+    @painting = Piece.where(piece_type:"Pintura").first.photos.first
+  end
 
   def contact_me
 

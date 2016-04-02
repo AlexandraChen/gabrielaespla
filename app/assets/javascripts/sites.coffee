@@ -34,3 +34,9 @@ $ ->
       'scrollTop': $target.offset().top
     }, 500, 'swing', ->
       window.location.hash = target
+
+  $(".item-tiles").mouseenter (e)->
+    $(e.currentTarget.children[0]).stop(true, true).fadeOut()
+
+  $(".item-tiles").mouseleave (e)->
+    $(e.currentTarget.children[0]).stop(true, true).fadeIn();

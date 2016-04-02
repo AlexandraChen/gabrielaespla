@@ -13926,14 +13926,7 @@ return jQuery;
 
 })( jQuery );
 (function() {
-  $(function() {
-    $(".piece-tiles").mouseenter(function(e) {
-      return $(e.currentTarget.children[0]).stop(true, true).fadeOut();
-    });
-    return $(".piece-tiles").mouseleave(function(e) {
-      return $(e.currentTarget.children[0]).stop(true, true).fadeIn();
-    });
-  });
+
 
 }).call(this);
 (function() {
@@ -13971,7 +13964,7 @@ return jQuery;
         visibility: "hidden"
       });
     });
-    return $('a[href^="#contact-me"], a[href^="#who-am-i"]').on('click', function(e) {
+    $('a[href^="#contact-me"], a[href^="#who-am-i"]').on('click', function(e) {
       var $target, target;
       e.preventDefault();
       target = this.hash;
@@ -13981,6 +13974,12 @@ return jQuery;
       }, 500, 'swing', function() {
         return window.location.hash = target;
       });
+    });
+    $(".item-tiles").mouseenter(function(e) {
+      return $(e.currentTarget.children[0]).stop(true, true).fadeOut();
+    });
+    return $(".item-tiles").mouseleave(function(e) {
+      return $(e.currentTarget.children[0]).stop(true, true).fadeIn();
     });
   });
 

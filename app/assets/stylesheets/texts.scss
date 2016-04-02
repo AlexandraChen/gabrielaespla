@@ -1,4 +1,11 @@
+@import 'colors.scss';
 .text-content{
   text-align: justify;
   text-justify: inter-word;
+  font-size: 16px;
+}
+
+.all-texts{
+  background-color: $light-gray;
+  opacity: 0.9;
 }

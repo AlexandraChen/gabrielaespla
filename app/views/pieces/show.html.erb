@@ -1,4 +1,4 @@
- <div class="wrapper">
+
    <div class="item-wrapper">
      <div class="row">
        <div class="col-sm-8 col-sm-offset-2">
@@ -36,7 +36,12 @@
         <div class="tech-specs pull-right">  
         <p><%= @piece.title %></p>
         <p>Técnica: <%= @piece.tech_spec %></p>
-        <p>Medidas: <%= @piece.measurement %></p>
+        <% if @piece.piece_type = "Performance" %>
+          <p>Duración: <%= @piece.measurement %></p>
+        <% else %>
+          <p>Medidas: <%= @piece.measurement %></p>
+        <% end %>
+        
         <p>Lugar: <%= @piece.place %></p>
         <p>Fecha: <%= @piece.published_date %></p>
         </div>  

@@ -1,6 +1,8 @@
-<div class="container">
-  <% @projects.each do |project| %>
-    <%= link_to project.title, project_path(project.id) %>
-    <br>
-  <% end %>
+<div class="wrapper">
+  <div class="container">
+    <% @projects.each do |project| %>
+      <%= link_to project.title, project_path(project.id) %>
+      <br>
+    <% end %>
+  </div>
 </div>
