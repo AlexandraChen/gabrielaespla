@@ -71,7 +71,6 @@ html, body {
     z-index: 3;
     >h1{
         color: $light-gray;
-        
       }
     >#more-about-me{
       height: 50px;
@@ -124,7 +123,7 @@ html, body {
   padding: 0;
   font-size:0;
   display: inline-block;
-  >p{
+  >p,>a{
     font-size: 32px;
     width: 100%;
     text-align: center;

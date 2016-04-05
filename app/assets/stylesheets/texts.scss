@@ -7,5 +7,13 @@
 
 .all-texts{
   background-color: $light-gray;
-  opacity: 0.9;
+  opacity: 0.95;
+}
+
+.text{
+  padding: 50px;
+}
+
+.wrapper.no-background{
+  background-color: transparent;
 }

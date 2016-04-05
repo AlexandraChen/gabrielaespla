@@ -1,20 +1,21 @@
-
-  <div class="container all-texts">
-    <div class="row">
-      <div class= "col-sm-8 col-sm-offset-2">
-        <div class="text">
-          <h1><%= @text.title%></h1>
-          <% if current_user && current_user.admin? %>
-            <%= link_to "Editar texto", edit_text_path(@text.id), class:"pull-right" %>
-          <% end %>
-          <br>
-          <%= simple_format @text.content, class:"text-content" %>
-          <br>
-          <br>
-          <div class="pull-right">
-            <%= @text.place %>, <%= @text.published_date %>
-          </div>
+<div class="wrapper no-background">
+<div class="container ">
+  <div class="row">
+    <div class= "col-sm-10 col-sm-offset-1 all-texts">
+      <div class="text">
+        <h1><%= @text.title%></h1>
+        <% if current_user && current_user.admin? %>
+          <%= link_to "Editar texto", edit_text_path(@text.id), class:"pull-right" %>
+        <% end %>
+        <br>
+        <%= simple_format @text.content, class:"text-content" %>
+        <br>
+        <br>
+        <div class="pull-right">
+          <%= @text.place %>, <%= @text.published_date %>
         </div>
       </div>
     </div>
-   </div>
+  </div>
+ </div>
+</div>

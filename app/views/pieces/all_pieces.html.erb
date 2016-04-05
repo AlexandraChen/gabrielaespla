@@ -1,82 +1,27 @@
 <div class="wrapper">
   <div class="container all-pieces">
-  <h1> Dibujos <h1>
-  <div class="index-tiles-wrapper">
-      <div class="outer r4x3">
-          <div class="inner">
-            <% @drawing.each do |x| %>
-              <% if x.model_name.name == "Project" %>
-                <a href="<%= project_path(x.id) %>" class="tiles">
-              <% elsif x.model_name == "Piece" %>
-                <a href="<%= piece_path(x.id) %>" class="tiles">
-              <% end %>
-                <div class="tiles-overlay">
-                  <p> <%= x.title %> </p>
-                </div>
-                <%= image_tag x.photos.first.img.url %>
-              </a>
-            <% end %>
-          </div>
-      </div>
-    </div>
-
-    <h1> Pinturas <h1>
-    <div class="index-tiles-wrapper">
-      <div class="outer r4x3">
-          <div class="inner">
-            <% @painting.each do |x| %>
-              <% if x.model_name.name == "Project" %>
-                <a href="<%= project_path(x.id) %>" class="tiles">
-              <% elsif x.model_name == "Piece" %>
-                <a href="<%= piece_path(x.id) %>" class="tiles">
-              <% end %>
-                <div class="tiles-overlay">
-                  <p> <%= x.title %> </p>
-                </div>
-                <%= image_tag x.photos.first.img.url %>
-              </a>
-            <% end %>
-          </div>
-      </div>
-    </div>
-
-    <h1> Performance <h1>
-    <div class="index-tiles-wrapper">
-      <div class="outer r4x3">
-          <div class="inner">
-            <% @performance.each do |x| %>
-              <% if x.model_name.name == "Project" %>
-                <a href="<%= project_path(x.id) %>" class="tiles">
-              <% elsif x.model_name == "Piece" %>
-                <a href="<%= piece_path(x.id) %>" class="tiles">
-              <% end %>
-                <div class="tiles-overlay">
-                  <p> <%= x.title %> </p>
-                </div>
-                <%= image_tag x.photos.first.img.url %>
-              </a>
-            <% end %>
-          </div>
-      </div>
-    </div>
-
-    <h1> Murales <h1>
-    <div class="index-tiles-wrapper">
-      <div class="outer r4x3">
-          <div class="inner">
-            <% @mural.each do |x| %>
-              <% if x.model_name.name == "Project" %>
-                <a href="<%= project_path(x.id) %>" class="tiles">
-              <% elsif x.model_name == "Piece" %>
-                <a href="<%= piece_path(x.id) %>" class="tiles">
-              <% end %>
-                <div class="tiles-overlay">
-                  <p> <%= x.title %> </p>
-                </div>
-                <%= image_tag x.photos.first.img.url %>
-              </a>
-            <% end %>
-          </div>
+    <div class= "piece-wrapper">
+      <div id="pins" class="transitions-enabled">
+        <div class="box" id="pieces-box">
+          <%= link_to "DIBUJO", proyectos_path, class:"piece-overlay"  %>
+          <%= image_tag @drawing.img.url  %>
+          <h1> Dibujo </h1>
+        </div>
+         <div class="box" id="pieces-box">
+          <%= link_to "PINTURA", proyectos_path, class:"piece-overlay"  %>
+          <%= image_tag @painting.img.url  %>
+          <h1> Pintura </h1>
+        </div>
+        <div class="box" id="pieces-box">
+          <%= link_to "PERFORMANCE", proyectos_path, class:"piece-overlay"  %>
+          <%= image_tag @performance.img.url  %>
+          <h1> Performance </h1>
+        </div>
+        <div class="box" id="pieces-box">
+          <%= link_to "MURAL", proyectos_path, class:"piece-overlay"  %>
+          <%= image_tag @mural.img.url  %>
+          <h1> Mural </h1>
+        </div>
       </div>
     </div>
   </div>

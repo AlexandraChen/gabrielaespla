@@ -1,24 +1,27 @@
-<div class="col-sm-6 col-sm-offset-3">
-<h1> Agregar un nuevo proyecto </h1>
-<br>      
-  <%= form_for @project do |f| %>
-    <%= f.label "Título" %>
-    <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
-    <br>
-    <%= f.fields_for @photo do |ff| %>
-      <%= ff.label "Foto del proyecto" %>
-      <%= ff.file_field :img %>
+<div class="wrapper">
+  <div class="col-sm-6 col-sm-offset-3">
+  <h1> Agregar un nuevo proyecto </h1>
+  <br>      
+    <%= form_for @project do |f| %>
+      <%= f.label "Título" %>
+      <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
+      <br>
+      <%= f.fields_for @photo do |ff| %>
+        <%= ff.label "Foto del proyecto" %>
+        <%= ff.file_field :img %>
+      <% end %>
+      <br>
+      <%= f.label "Descripción" %>
+      <%= f.text_area :description, class: "form-control", placeholder: "Decripción" %>
+      <br>
+      <%= f.label "Fecha de publicación" %>
+      <%= f.date_field :published_date, class: "form-control", placeholder: "Fecha de publicación" %>
+      <br>
+      <br>
+      <%= f.submit "Agregar proyecto", class: "btn btn-default col-sm-12"%>
     <% end %>
-    <br>
-    <%= f.label "Descripción" %>
-    <%= f.text_area :description, class: "form-control", placeholder: "Decripción" %>
-    <br>
-    <%= f.label "Fecha de publicación" %>
-    <%= f.date_field :published_date, class: "form-control", placeholder: "Fecha de publicación" %>
-    <br>
-    <br>
-    <%= f.submit "Agregar proyecto", class: "btn btn-default col-sm-12"%>
-  <% end %>
+  </div>
 </div>
+
 
 

@@ -1,45 +1,47 @@
-<div class="container">
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Textos</h3>
-        <p><%= link_to "Agregar texto", new_text_path %></p>
-      </div>
-      <div class="panel-body admin-listing">
-        <% @texts.each do |text| %>
-          <li><%= link_to text.title, text_path(text.id) %>| ID <%= text.id %> | <%= link_to "Editar texto", edit_text_path(text.id) %>
-          </li> <br>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Obras</h3>
-        <p><%= link_to "Agregar obra", new_piece_path %></p>
-      </div>
-      <div class="panel-body admin-listing">
-        <% @pieces.each do |piece| %>
-          <li><%= link_to piece.title, piece_path(piece.id) %>| ID <%= piece.id %> | <%= link_to "Editar obra", edit_piece_path(piece.id) %>
-          </li> <br>
-        <% end %>
+<div class="wrapper">
+  <div class="container">
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Textos</h3>
+          <p><%= link_to "Agregar texto", new_text_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @texts.each do |text| %>
+            <li><%= link_to text.title, text_path(text.id) %>| ID <%= text.id %> | <%= link_to "Editar texto", edit_text_path(text.id) %>
+            </li> <br>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Proyectos</h3>
-        <p><%= link_to "Agregar proyecto", new_project_path %></p>
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Obras</h3>
+          <p><%= link_to "Agregar obra", new_piece_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @pieces.each do |piece| %>
+            <li><%= link_to piece.title, piece_path(piece.id) %>| ID <%= piece.id %> | <%= link_to "Editar obra", edit_piece_path(piece.id) %>
+            </li> <br>
+          <% end %>
+        </div>
       </div>
-      <div class="panel-body admin-listing">
-        <% @projects.each do |project| %>
-          <li><%= link_to project.title, project_path(project.id) %>| ID <%= project.id %> | <%= link_to "Editar proyecto", edit_project_path(project.id) %>
-          </li> <br>
-        <% end %>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Proyectos</h3>
+          <p><%= link_to "Agregar proyecto", new_project_path %></p>
+        </div>
+        <div class="panel-body admin-listing">
+          <% @projects.each do |project| %>
+            <li><%= link_to project.title, project_path(project.id) %>| ID <%= project.id %> | <%= link_to "Editar proyecto", edit_project_path(project.id) %>
+            </li> <br>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -1,15 +1,14 @@
-<div class="wrapper">
+<div class="wrapper no-background">
  <div class="container">
   <div class="row">
     <div class="col-sm-2">
       <% @texts.each do |text| %>
         <%= link_to text.title, text_path(text.id)%>
-      <% end  %>
-      
+      <% end  %>      
     </div>
-    <div class= "col-sm-8">
-      <div class="text">
-        <% @texts.each do |text| %>
+    <div class= "col-sm-8 all-texts">
+      <% @texts.each do |text| %>
+        <div class="text">
           <h1><%= text.title %></h1>
           <% if current_user && current_user.admin %>
             <%= link_to "Editar texto", edit_text_path(text.id), class:"pull-right" %>
@@ -20,11 +19,11 @@
           <br>
           <div class="pull-right">
             <%= text.place %>, <%= text.published_date %>
-          </div>
-        <% end %>
-      </div>
-      <br>
-      <hr>
+          </div> 
+        </div>
+        <hr>
+        <br>
+      <% end %>
     </div>
   </div>
  </div>
