@@ -42,6 +42,9 @@ Rails.application.configure do
   #Devise mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  #Email form
+  config.action_mailer.delivery_method = :letter_opener
+  
   #AWS and paperclip
   config.paperclip_defaults = {
   :storage => :s3,

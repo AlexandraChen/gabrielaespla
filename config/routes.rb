@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   resources :photos, except: [:destroy]
   resources :pieces, except: [:destroy]
   resources :projects, except: [:destroy]
+  resources :contact_forms, only: [:new, :create]
 
 end
