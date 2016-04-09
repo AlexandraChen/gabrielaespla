@@ -1,6 +1,17 @@
-<div class="container">
-  <% @drawings.each do |drawing| %>
-    <%= link_to drawing.title, piece_path(drawing.id) %>
-    <br>
-  <% end %>
+<div class="wrapper">
+  <div class="container all-pieces">
+    <h1>Dibujo</h1>
+     <div class= "piece-wrapper">
+      <div id="pins" class="transitions-enabled">
+        <% @drawings.each do |drawing| %>
+        <div class="box">
+          <%= link_to drawing.title, pieces_path(drawing.id), class:"project-overlay"  %>
+          <%= image_tag(drawing.photos.first.img.url(:medium))%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

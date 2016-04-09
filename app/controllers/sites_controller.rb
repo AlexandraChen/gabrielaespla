@@ -1,5 +1,6 @@
 class SitesController < ApplicationController
   def bio
+    @contact_form = ContactForm.new
   end
 
   def index
@@ -12,6 +13,6 @@ class SitesController < ApplicationController
   end
 
   def contact_me
-
+    @contact_form = ContactForm.new
   end
 end

@@ -43,7 +43,7 @@
         <% end %>
         
         <p>Lugar: <%= @piece.place %></p>
-        <p>Fecha: <%= @piece.published_date %></p>
+        <p>Fecha: <%= @piece.published_date.strftime("%Y") %></p>
         </div>  
       </div> 
     </div> 

@@ -1,6 +1,17 @@
-<div class="container">
-  <% @murals.each do |mural| %>
-    <%= link_to mural.title, piece_path(mural.id) %>
-    <br>
-  <% end %>
+<div class="wrapper">
+  <div class="container all-pieces">
+    <h1>Murales</h1>
+     <div class= "piece-wrapper">
+      <div id="pins" class="transitions-enabled">
+        <% @murals.each do |mural| %>
+        <div class="box">
+          <%= link_to mural.title, pieces_path(mural.id), class:"project-overlay"  %>
+          <%= image_tag(mural.photos.first.img.url(:medium))%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

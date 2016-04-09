@@ -1,6 +1,17 @@
-<div class="container">
-  <% @performances.each do |performance| %>
-    <%= link_to performance.title, piece_path(performance.id) %>
-    <br>
-  <% end %>
+<div class="wrapper">
+  <div class="container all-pieces">
+    <h1>Performance</h1>
+     <div class= "piece-wrapper">
+      <div id="pins" class="transitions-enabled">
+        <% @performances.each do |performance| %>
+        <div class="box">
+          <%= link_to performance.title, pieces_path(performance.id), class:"project-overlay"  %>
+          <%= image_tag(performance.photos.first.img.url(:medium))%>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

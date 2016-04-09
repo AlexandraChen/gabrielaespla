@@ -36,7 +36,7 @@
         <div class="description-specs pull-right">  
         <p><%= @project.title %></p>
         <p>Descripción: <%= @project.description %></p>
-        <p>Fecha: <%= @project.published_date %></p>
+        <p>Fecha: <%= @project.published_date.strftime("%Y") %></p>
         </div>  
       </div> 
     </div> 

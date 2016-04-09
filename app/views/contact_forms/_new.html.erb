@@ -4,11 +4,7 @@
   <div class="container">
     <div class="col-sm-10 col-sm-offset-1 contact-me-form">
       <p class="say-hi">Di hola@gabrielaespla.com !<p>
-<!--       <input type="text" name="fname" class="form-control contact-input" placeholder="Nombre"><br>
-      <input type="text" name="fname" class="form-control contact-input" placeholder="Email"><br>
-      <textarea as="text" name="fname" class="form-control contact-input" placeholder="Escribe tu mensaje"></textarea><br> -->
-    
-
+      <br>
     <%= form_for @contact_form do |f|  %> 
       <%= f.text_field  :name, :required => true, class: "form-control contact-input", placeholder: "Nombre"  %> 
       <br>
@@ -20,8 +16,7 @@
       <%= f.submit "Enviar mensaje", class: "submit-btn msg", id: "email-us"%>
     <% end %>
     </div>
-<!-- 
-    <a class="submit-btn msg"> Enviar mensaje </a> -->
   </div>
 </div>
+
 
