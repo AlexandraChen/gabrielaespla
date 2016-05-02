@@ -1,35 +1,37 @@
-<div class="col-sm-6 col-sm-offset-3">
-<h1> Editar obra </h1>
-<br>      
-  <%= form_for @piece do |f| %>
-    <%= f.label "Título" %>
-    <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
-    <br>
-    
-    <%= f.fields_for @photo do |ff| %>
-      <%= ff.label "Product picture" %>
-      <%= ff.file_field :img %>
-    <% end %>
+<div class="wrapper">
+  <div class="col-sm-6 col-sm-offset-3">
+  <h1> Editar obra </h1>
+  <br>      
+    <%= form_for @piece do |f| %>
+      <%= f.label "Título" %>
+      <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
+      <br>
+      
+      <%= f.fields_for @photo do |ff| %>
+        <%= ff.label "Product picture" %>
+        <%= ff.file_field :img %>
+      <% end %>
 
-    <%= f.label "Ficha técnica" %>
-    <%= f.text_area :tech_spec, class: "form-control", placeholder: "Ficha técnica"%>
-    <br>
-    <%= f.label "Medidas" %>
-    <%= f.text_field :measurement, class: "form-control", placeholder: "Medidas" %>
-    <br>
-    <%= f.label "Lugar" %>
-    <%= f.text_field :place, class: "form-control", placeholder: "Lugar" %>
-    <br>
-    <%= f.label "Fecha de publicación" %>
-    <%= f.date_field :published_date, class: "form-control", placeholder: "Fecha de publicación" %>
-    <br>
-    <%= f.label "Tipo de obra" %>
-    <br>
-    <%= f.select :piece_type, ["Dibujo", "Performance","Mural", "Pintura"], include_blank: true, class: "select form-control" %>
+      <%= f.label "Ficha técnica" %>
+      <%= f.text_area :tech_spec, class: "form-control", placeholder: "Ficha técnica"%>
       <br>
+      <%= f.label "Medidas" %>
+      <%= f.text_field :measurement, class: "form-control", placeholder: "Medidas" %>
       <br>
-    <%= f.submit "Agregar obra", class: "btn btn-default col-sm-12"%>
-  <% end %>
+      <%= f.label "Lugar" %>
+      <%= f.text_field :place, class: "form-control", placeholder: "Lugar" %>
+      <br>
+      <%= f.label "Fecha de publicación" %>
+      <%= f.date_field :published_date, class: "form-control", placeholder: "Fecha de publicación" %>
+      <br>
+      <%= f.label "Tipo de obra" %>
+      <br>
+      <%= f.select :piece_type, ["Dibujo", "Performance","Mural", "Pintura"], include_blank: true, class: "select form-control" %>
+        <br>
+        <br>
+      <%= f.submit "Agregar obra", class: "btn btn-default col-sm-12"%>
+    <% end %>
+  </div>
 </div>
 
 
