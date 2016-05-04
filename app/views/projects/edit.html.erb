@@ -1,7 +1,7 @@
 <div class="col-sm-6 col-sm-offset-3">
 <h1> Editar proyecto </h1>
 <br>      
-  <%= form_for @project, :multipart => true  do |f| %>
+  <%= form_for @project, html: { multipart: true } do |f| %>
     <%= f.label "Título" %>
     <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
     <br>
@@ -9,7 +9,7 @@
     <% if @project.photos.exists? %>
       <%@project.photos.each do |x|  %>
       <%= image_tag x.img.url(:thumb) %>
-      <%= x.check_box :_destroy %>
+      <%= check_box_tag "photo_ids[]", x.id %>
       <% end %>
     <% end %>
 

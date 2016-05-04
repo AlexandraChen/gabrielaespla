@@ -45,6 +45,12 @@ class ProjectsController < ApplicationController
 
   def update
     @project = current_user.projects.find(params[:id])
+    if params[:photo_ids]
+      params[:photo_ids].each do |photo|
+        Photo.find(photo).destroy
+      end
+    end
+
     if @project.update_attributes(project_params)
       if params[:images]
         params[:images].each do |image|
@@ -61,7 +67,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:title, :description, :published_date, :place, photos_attributes: [ :_destroy, img: [] ])
+    params.require(:project).permit(:title, :description, :published_date, :place, photos_attributes: [ :_destroy, img: [] ], photo_ids: [] )
   end 
 
   def photo_params
