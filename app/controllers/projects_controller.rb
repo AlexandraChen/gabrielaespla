@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
       @photo = @project.photos.new
     else
       flash[:notice] = "Tienes que ser un adminstrador para agregar proyectos!"
-        redirect_to root_path
+      redirect_to root_path
     end 
   end
 
@@ -58,7 +58,7 @@ class ProjectsController < ApplicationController
         end
       end
       redirect_to admin_panel_path, notice: "Proyecto editado exitosamente!"
-      else
+    else
       flash[:notice] = "Hubo un problema con la edición de proyecto. Intenta nuevamente!"
       render :edit
     end

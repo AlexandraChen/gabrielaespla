@@ -2,15 +2,19 @@
   <div class="col-sm-6 col-sm-offset-3">
   <h1> Editar obra </h1>
   <br>      
-    <%= form_for @piece do |f| %>
+    <%= form_for @piece, html: { multipart: true }  do |f| %>
       <%= f.label "Título" %>
       <%= f.text_field :title, class: "form-control", placeholder:"Título" %>
       <br>
       
-      <%= f.fields_for @photo do |ff| %>
-        <%= ff.label "Product picture" %>
-        <%= ff.file_field :img %>
+      <% if @piece.photos.exists? %>
+        <%@piece.photos.each do |x|  %>
+        <%= image_tag x.img.url(:thumb) %>
+        <%= check_box_tag "photo_ids[]", x.id %>
+        <% end %>
       <% end %>
+      <%= file_field_tag "images[]", type: :file, multiple: true %>
+      <br>
 
       <%= f.label "Ficha técnica" %>
       <%= f.text_area :tech_spec, class: "form-control", placeholder: "Ficha técnica"%>

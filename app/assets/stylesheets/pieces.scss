@@ -1,7 +1,8 @@
 @import 'colors.scss';
-.item-wrapper{
+#item-wrapper{
   padding-top: 30px;
   background-color: $silver;
+  height: 100%;
 }
 .carousel.slide{
   width: 100%;

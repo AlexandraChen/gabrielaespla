@@ -1,4 +1,5 @@
 class PiecesController < ApplicationController
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
   def all_pieces
     # @pieces = Piece.order("created_at DESC")
     # @drawing = Piece.where(piece_type:"Dibujo").order("created_at DESC")
@@ -35,19 +36,21 @@ class PiecesController < ApplicationController
   def new
     if current_user.admin?
       @piece = current_user.pieces.new
-      @photo = Photo.new
+      @photo = @piece.photos.new
     else
       flash[:notice] = "Tienes que ser un adminstrador para agregar obras!"
-        redirect_to root_path
+      redirect_to root_path
     end 
   end
 
   def create
     @piece = current_user.pieces.new(piece_params)
-    @photo = Photo.new(photo_params)
     if @piece.save
-      @photo.piece_id = @piece.id
-      @photo.save
+      if params[:images]
+        params[:images].each do |image|
+          @piece.photos.create(img: image)
+        end
+      end
       redirect_to admin_panel_path, notice: "Nuevo obra creada exitosamente!" 
     else
       flash[:notice] = "Hubo un error al crear la obra."
@@ -56,27 +59,40 @@ class PiecesController < ApplicationController
   end
 
   def edit
-    @piece = Piece.find(params[:id])
-    @photo = @piece.photos.first
+    if current_user.admin?
+      @piece = Piece.find(params[:id])
+      @photo = @piece.photos.first
+    else
+      flash[:notice] = "Tienes que ser un adminstrador para editar obras!"
+        redirect_to root_path
+    end
   end
 
   def update
     @piece = Piece.find(params[:id])
-    @piece.update_attributes(piece_params)
-    @photo = @piece.photos.first
-    if current_user.admin?
-      if @piece.save
-        redirect_to admin_panel_path, notice: "Obra editada exitosamente!"
-        return
+    if params[:photo_ids]
+      params[:photo_ids].each do |photo|
+        Photo.find(photo).destroy
       end
     end
-    flash[:notice] = "Hubo un problema con la edición de obra. Intenta nuevamente!"
-    render :edit
+  
+    if @piece.update_attributes(piece_params)
+        if params[:images]
+          params[:images].each do |image|
+          @piece.photos.create(img: image)
+        end
+      end
+      redirect_to admin_panel_path, notice: "Obra editada exitosamente!"
+    else
+      flash[:notice] = "Hubo un problema con la edición de obra. Intenta nuevamente!"
+      render :edit
+    end
+
   end
 
   private
   def piece_params
-    params.require(:piece).permit(:title, :tech_spec, :measurement, :piece_type, :published_date, :place)
+    params.require(:piece).permit(:title, :tech_spec, :measurement, :piece_type, :published_date, :place, photos_attributes: [ img: [] ], photo_ids: [])
   end
 
   def photo_params

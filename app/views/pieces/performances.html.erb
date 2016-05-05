@@ -5,7 +5,7 @@
       <div id="pins" class="transitions-enabled">
         <% @performances.each do |performance| %>
         <div class="box">
-          <%= link_to performance.title, pieces_path(performance.id), class:"project-overlay"  %>
+          <%= link_to performance.title, piece_path(performance.id), class:"project-overlay"  %>
           <%= image_tag(performance.photos.first.img.url(:medium))%>
         </div>
         <% end %>
