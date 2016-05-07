@@ -9,12 +9,13 @@
   height: 550px;
 }
 
-.item>.piece-img{
+.piece-img{
   margin: auto;
   max-height: 550px;
   width: auto;
   max-width: 100%;
   position: relative;
+  text-align: center;
 }
 
 .piece-details{

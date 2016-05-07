@@ -1,0 +1,33 @@
+@import 'colors.scss';
+
+.photos-and-details{
+  margin: 45px 0 45px 0;
+}
+
+.thumb-photos{
+  width: 100px;
+  height: 100px;
+  display:inline-block;
+  >img{
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+.row.main-photo-container{
+  text-align: center;
+  width:100%;
+}
+
+.main-photo{
+  margin: auto;
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+}
