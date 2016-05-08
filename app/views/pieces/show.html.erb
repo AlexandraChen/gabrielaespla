@@ -1,28 +1,48 @@
  <div class="wrapper" id="item-wrapper">
 
-   <div class="row">
-     <div class="col-sm-8 col-sm-offset-2 main-photo">
-     <%= image_tag @piece.photos.first.img.url, class: "piece-img" %>   
+  <div class="col-sm-2 col-sm-offset-10 pull-right">
+    <% if current_user && current_user.admin? %>
+      <%= link_to "Editar obra", edit_piece_path(@piece.id)  %>
+    <% end %>
+  </div>
+
+  <div class="row main-photo-container">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= image_tag @piece.photos.first.img.url, class: "main-photo" %> 
     </div> 
-   </div> 
+  </div>
 
-
-    <div class="row piece-details">
-     <div class="col-sm-8 col-sm-offset-2 ">
-        <div class="tech-specs pull-right">  
-        <p><%= @piece.title %></p>
-        <p>Técnica: <%= @piece.tech_spec %></p>
-        <% if @piece.piece_type = "Performance" %>
-          <p>Duración: <%= @piece.measurement %></p>
-        <% else %>
-          <p>Medidas: <%= @piece.measurement %></p>
+    <div class="container">
+    <div class="row photos-and-details">
+      <div class="col-sm-4 col-sm-offset-2 center">
+        <div class="thumb-photos-container">
+        <% @piece.photos.each do |photo| %>
+          <div class="thumb-photos">
+            <a class="fancybox" rel="gallery1" href="<%= photo.img.url %>" title="<%= @piece.title %>">
+             <img src="<%= photo.img.url %>" alt="" />
+            </a>
+          </div>
         <% end %>
-        
-        <p>Lugar: <%= @piece.place %></p>
-        <p>Fecha: <%= @piece.published_date.strftime("%Y") %></p>
-        </div>  
+        </div>
       </div> 
-    </div> 
+
+      <div class="col-sm-6">
+        <div class="description-specs">  
+          <p>Técnica: <%= @piece.tech_spec %></p>
+
+          <% if @piece.piece_type = "Performance" %>
+            <p>Duración: <%= @piece.measurement %></p>
+          <% else %>
+            <p>Medidas: <%= @piece.measurement %></p>
+          <% end %>
+          
+          <p>Lugar: <%= @piece.place %></p>
+          <p>Fecha: <%= @piece.published_date.strftime("%Y") %></p>
+        </div>  
+      </div>
+
+    </div>
+  </div>
 
 </div>
 

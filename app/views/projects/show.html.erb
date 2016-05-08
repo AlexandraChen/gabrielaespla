@@ -6,7 +6,6 @@
     <% end %>
   </div>
 
-
   <div class="row main-photo-container">
     <div class="col-sm-8 col-sm-offset-2">
       <%= image_tag @project.photos.first.img.url, class: "main-photo" %> 
@@ -15,11 +14,13 @@
 
   <div class="container">
     <div class="row photos-and-details">
-      <div class="col-sm-6 center">
+      <div class="col-sm-4 col-sm-offset-2 center">
         <div class="thumb-photos-container">
         <% @project.photos.each do |photo| %>
           <div class="thumb-photos">
-            <%= image_tag photo.img.url(:thumb)%>
+            <a class="fancybox" rel="gallery1" href="<%= photo.img.url %>" title="<%= @project.title %>">
+             <img src="<%= photo.img.url %>" alt="" />
+            </a>
           </div>
         <% end %>
         </div>

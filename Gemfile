@@ -32,7 +32,6 @@ gem 'figaro'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'mail_form'
 gem 'letter_opener'
-
 gem 'fancybox2-rails', '~> 0.2.8'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
