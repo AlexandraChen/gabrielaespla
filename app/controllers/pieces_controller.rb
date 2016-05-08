@@ -61,7 +61,7 @@ class PiecesController < ApplicationController
   def edit
     if current_user.admin?
       @piece = Piece.find(params[:id])
-      @photo = @piece.photos.first
+      @photo = @piece.photos.new
     else
       flash[:notice] = "Tienes que ser un adminstrador para editar obras!"
         redirect_to root_path
