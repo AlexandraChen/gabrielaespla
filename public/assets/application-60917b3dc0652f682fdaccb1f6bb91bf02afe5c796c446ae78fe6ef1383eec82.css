@@ -11886,18 +11886,8 @@ html, body {
 /* line 187, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 .contact-me {
   width: 100%;
-  height: 100%;
+  height: auto;
   text-align: center;
-}
-
-/* line 193, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
-.contact-me-overlay {
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.30;
-  position: absolute;
-  z-index: 2;
 }
 
 /* line 202, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
