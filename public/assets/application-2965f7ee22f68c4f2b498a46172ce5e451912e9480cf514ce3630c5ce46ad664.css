@@ -11401,19 +11401,20 @@ button.close {
 #pieces-box, #projects-box {
   border: none;
   box-shadow: none;
+  background-color: transparent;
 }
 
-/* line 40, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 41, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #rounded-img-wrapper img {
   border-radius: 50%;
 }
 
-/* line 44, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 45, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #rounded-img-wrapper a {
   border-radius: 50%;
 }
 
-/* line 48, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 49, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .panel-body {
   padding: 0;
 }
