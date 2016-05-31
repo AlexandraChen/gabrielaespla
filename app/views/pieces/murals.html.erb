@@ -4,9 +4,14 @@
      <div class= "piece-wrapper">
       <div id="pins" class="transitions-enabled">
         <% @murals.each do |mural| %>
-        <div class="box">
-          <%= link_to mural.title, piece_path(mural.id), class:"project-overlay"  %>
-          <%= image_tag(mural.photos.first.img.url(:medium))%>
+        <div class="box panel panel-default" id="projects-box">
+          <div class="panel-heading" id="img-wrapper">
+            <%= link_to mural.title, piece_path(mural.id), class:"project-overlay"  %>
+            <%= image_tag(mural.photos.first.img.url(:medium))%>
+          </div>
+          <div class="panel-body">
+              <p class="item-subtitle"> <%= mural.title %> </p>
+          </div>
         </div>
         <% end %>
       </div>

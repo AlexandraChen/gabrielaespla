@@ -21,7 +21,12 @@ $navbar-default-link-color: $coral;
   font-size:18px;
 }
 
-.panel-default > .panel-heading {
+.panel-default > #rounded-img-wrapper {
+  height: 250px;
+  padding: 0;
+}
+
+.panel-default > #img-wrapper {
   height: 250px;
   padding: 0;
 }
@@ -35,7 +40,7 @@ $navbar-default-link-color: $coral;
 #pieces-box, #projects-box{
   border: none;
   box-shadow: none;
-  background-color: transparent;
+  background-color: transparent
 }
 
 #rounded-img-wrapper img{

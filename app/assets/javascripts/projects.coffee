@@ -6,14 +6,16 @@ $ ->
     $('#pins').masonry
       itemSelector: '.box'
       isFitWidth: true
-  # $(".box").mouseenter (e)->
-  #   $(e.currentTarget.children[0]).css({visibility: "visible"})
 
-  # $(".box").mouseleave (e)->
-  #   $(e.currentTarget.children[0]).css({visibility: "hidden"})
-
-  $(".panel-heading").mouseenter (e)->
+  $(".panel-heading#rounded-img-wrapper").mouseenter (e)->
     $(e.currentTarget.children[0]).css({visibility: "visible"})
 
-  $(".panel-heading").mouseleave (e)->
+  $(".panel-heading#rounded-img-wrapper").mouseleave (e)->
+    $(e.currentTarget.children[0]).css({visibility: "hidden"})
+
+
+  $(".panel-heading#img-wrapper").mouseenter (e)->
+    $(e.currentTarget.children[0]).css({visibility: "visible"})
+
+  $(".panel-heading#img-wrapper").mouseleave (e)->
     $(e.currentTarget.children[0]).css({visibility: "hidden"})

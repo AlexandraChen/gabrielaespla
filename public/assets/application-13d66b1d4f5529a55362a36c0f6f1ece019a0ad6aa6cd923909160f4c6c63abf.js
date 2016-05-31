@@ -16952,12 +16952,22 @@ return jQuery;
         isFitWidth: true
       });
     });
-    $(".panel-heading").mouseenter(function(e) {
+    $(".panel-heading#rounded-img-wrapper").mouseenter(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "visible"
       });
     });
-    return $(".panel-heading").mouseleave(function(e) {
+    $(".panel-heading#rounded-img-wrapper").mouseleave(function(e) {
+      return $(e.currentTarget.children[0]).css({
+        visibility: "hidden"
+      });
+    });
+    $(".panel-heading#img-wrapper").mouseenter(function(e) {
+      return $(e.currentTarget.children[0]).css({
+        visibility: "visible"
+      });
+    });
+    return $(".panel-heading#img-wrapper").mouseleave(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "hidden"
       });

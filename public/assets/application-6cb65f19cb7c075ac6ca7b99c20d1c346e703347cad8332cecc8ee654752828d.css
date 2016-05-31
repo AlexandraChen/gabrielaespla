@@ -11385,36 +11385,42 @@ button.close {
 }
 
 /* line 24, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.panel-default > .panel-heading {
+.panel-default > #rounded-img-wrapper {
   height: 250px;
   padding: 0;
 }
 
 /* line 29, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.panel-default > #img-wrapper {
+  height: 250px;
+  padding: 0;
+}
+
+/* line 34, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #rounded-img-wrapper {
   color: #fff;
   background-color: #fff;
   border-color: #fff;
 }
 
-/* line 35, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 40, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #pieces-box, #projects-box {
   border: none;
   box-shadow: none;
   background-color: transparent;
 }
 
-/* line 41, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 46, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #rounded-img-wrapper img {
   border-radius: 50%;
 }
 
-/* line 45, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 50, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 #rounded-img-wrapper a {
   border-radius: 50%;
 }
 
-/* line 49, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+/* line 54, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 .panel-body {
   padding: 0;
 }
