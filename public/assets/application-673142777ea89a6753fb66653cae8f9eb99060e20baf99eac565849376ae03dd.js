@@ -16952,12 +16952,12 @@ return jQuery;
         isFitWidth: true
       });
     });
-    $(".box").mouseenter(function(e) {
+    $(".panel-heading").mouseenter(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "visible"
       });
     });
-    return $(".box").mouseleave(function(e) {
+    return $(".panel-heading").mouseleave(function(e) {
       return $(e.currentTarget.children[0]).css({
         visibility: "hidden"
       });

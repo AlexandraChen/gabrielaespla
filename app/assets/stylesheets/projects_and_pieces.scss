@@ -67,4 +67,13 @@
   font-size: 28px;
 }
 
+#pieces-box, #projects-box{
+  width: 250px;
+  height: auto;
+  // height: 250px;
+  >img{
+    border-radius: 50%;
+  }
+  >.piece-overlay{}
+}
 

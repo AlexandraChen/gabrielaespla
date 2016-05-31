@@ -11383,6 +11383,40 @@ button.close {
   border-radius: 0px;
   font-size: 18px;
 }
+
+/* line 24, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.panel-default > .panel-heading {
+  height: 250px;
+  padding: 0;
+}
+
+/* line 29, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#rounded-img-wrapper {
+  color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* line 35, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#pieces-box, #projects-box {
+  border: none;
+  box-shadow: none;
+}
+
+/* line 40, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#rounded-img-wrapper img {
+  border-radius: 50%;
+}
+
+/* line 44, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+#rounded-img-wrapper a {
+  border-radius: 50%;
+}
+
+/* line 48, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
+.panel-body {
+  padding: 0;
+}
 /* line 3, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .carousel.slide {
   width: 100%;
@@ -11500,21 +11534,21 @@ span.fa {
 /* line 98, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 #pieces-box {
   width: 250px;
-  height: 250px;
+  height: auto;
 }
-/* line 101, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 102, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 #pieces-box > img {
   border-radius: 50%;
 }
 
-/* line 107, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 108, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .piece-overlay {
   background-color: #eea097;
   opacity: 0.9;
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 250px;
   border-radius: 50%;
   visibility: hidden;
   display: flex;
@@ -11523,13 +11557,13 @@ span.fa {
   align-items: center;
   font-size: 200%;
 }
-/* line 120, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 121, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .piece-overlay:hover {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 126, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 127, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .piece-wrapper {
   margin-top: 75px;
 }
@@ -11570,14 +11604,14 @@ span.fa {
   overflow: hidden;
 }
 
-/* line 38, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
+/* line 37, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
 .project-overlay {
   background-color: #eea097;
   opacity: 0.9;
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 250px;
   visibility: hidden;
   display: flex;
   justify-content: center;
@@ -11585,13 +11619,13 @@ span.fa {
   align-items: center;
   font-size: 200%;
 }
-/* line 50, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
+/* line 49, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
 .project-overlay:hover {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 56, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
+/* line 55, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
 .project-details {
   width: 100%;
 }
@@ -11672,6 +11706,16 @@ span.fa {
   color: #cdcdcd;
   text-align: center;
   font-size: 28px;
+}
+
+/* line 70, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects_and_pieces.scss */
+#pieces-box, #projects-box {
+  width: 250px;
+  height: auto;
+}
+/* line 74, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects_and_pieces.scss */
+#pieces-box > img, #projects-box > img {
+  border-radius: 50%;
 }
 /* line 3, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
 html, body {

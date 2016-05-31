@@ -6,8 +6,14 @@ $ ->
     $('#pins').masonry
       itemSelector: '.box'
       isFitWidth: true
-  $(".box").mouseenter (e)->
+  # $(".box").mouseenter (e)->
+  #   $(e.currentTarget.children[0]).css({visibility: "visible"})
+
+  # $(".box").mouseleave (e)->
+  #   $(e.currentTarget.children[0]).css({visibility: "hidden"})
+
+  $(".panel-heading").mouseenter (e)->
     $(e.currentTarget.children[0]).css({visibility: "visible"})
 
-  $(".box").mouseleave (e)->
+  $(".panel-heading").mouseleave (e)->
     $(e.currentTarget.children[0]).css({visibility: "hidden"})

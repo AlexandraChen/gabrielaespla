@@ -20,3 +20,31 @@ $navbar-default-link-color: $coral;
   border-radius: 0px;
   font-size:18px;
 }
+
+.panel-default > .panel-heading {
+  height: 250px;
+  padding: 0;
+}
+
+#rounded-img-wrapper{
+  color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+#pieces-box, #projects-box{
+  border: none;
+  box-shadow: none;
+}
+
+#rounded-img-wrapper img{
+  border-radius: 50%;
+}
+
+#rounded-img-wrapper a{
+  border-radius: 50%;
+}
+
+.panel-body{
+  padding: 0;
+}

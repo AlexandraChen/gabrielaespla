@@ -1,28 +1,49 @@
 <div class="wrapper">
   <div class="container all-pieces">
-    <h1 class="item-title">Obras</h1>
+    <p class="item-title">Obras</h1>
     <div class= "piece-wrapper">
       <div id="pins" class="transitions-enabled">
-        <div class="box" id="pieces-box">
-          <%= link_to "", obras_dibujos_path, class:"piece-overlay"  %>
-          <%= image_tag @drawing.img.url  %>
-          <p class="item-subtitle"> Dibujo </h1>
+
+        <div class="box panel panel-default" id="pieces-box">
+          <div class="panel-heading" id="rounded-img-wrapper">
+            <%= link_to "", obras_dibujos_path, class:"piece-overlay"  %> 
+            <%= image_tag @drawing.img.url(:medium)  %>
+          </div>
+          <div class="panel-body">
+            <p class="item-subtitle"> Dibujo </p>
+          </div>
         </div>
-         <div class="box" id="pieces-box">
-          <%= link_to "", obras_pinturas_path, class:"piece-overlay"  %>
-          <%= image_tag @painting.img.url  %>
-          <p class="item-subtitle"> Pintura </h1>
+
+        <div class="box panel panel-default" id="pieces-box">
+          <div class="panel-heading" id="rounded-img-wrapper">
+            <%= link_to "", obras_pinturas_path, class:"piece-overlay"  %> 
+            <%= image_tag @painting.img.url(:medium)  %>
+          </div>
+          <div class="panel-body">
+            <p class="item-subtitle"> Pintura </p>
+          </div>
         </div>
-        <div class="box" id="pieces-box">
-          <%= link_to "", obras_performances_path, class:"piece-overlay"  %>
-          <%= image_tag @performance.img.url  %>
-          <p class="item-subtitle"> Performance </h1>
+
+        <div class="box panel panel-default" id="pieces-box">
+          <div class="panel-heading" id="rounded-img-wrapper">
+            <%= link_to "", obras_performances_path, class:"piece-overlay"  %> 
+            <%= image_tag @performance.img.url(:medium)  %>
+          </div>
+          <div class="panel-body">
+            <p class="item-subtitle"> Performances </p>
+          </div>
         </div>
-        <div class="box" id="pieces-box">
-          <%= link_to "", obras_murales_path, class:"piece-overlay"  %>
-          <%= image_tag @mural.img.url  %>
-          <p class="item-subtitle"> Mural </h1>
+
+        <div class="box panel panel-default" id="pieces-box">
+          <div class="panel-heading" id="rounded-img-wrapper">
+            <%= link_to "", obras_murales_path, class:"piece-overlay"  %> 
+            <%= image_tag @mural.img.url(:medium)  %>
+          </div>
+          <div class="panel-body">
+            <p class="item-subtitle"> Murales </p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
