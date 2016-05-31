@@ -1,5 +1,4 @@
  <div class="wrapper" id="item-wrapper">
-
   <div class="col-sm-2 col-sm-offset-10 pull-right">
     <% if current_user && current_user.admin? %>
       <%= link_to "Editar obra", edit_piece_path(@piece.id)  %>
@@ -7,6 +6,7 @@
   </div>
 
   <div class="row main-photo-container">
+    <h1 class="item-title"><%= @piece.title %></h1>
     <div class="col-sm-8 col-sm-offset-2">
       <%= image_tag @piece.photos.first.img.url, class: "main-photo" %> 
     </div> 
@@ -28,16 +28,10 @@
 
       <div class="col-sm-6">
         <div class="description-specs">  
-          <p>Técnica: <%= @piece.tech_spec %></p>
-
-          <% if @piece.piece_type = "Performance" %>
-            <p>Duración: <%= @piece.measurement %></p>
-          <% else %>
-            <p>Medidas: <%= @piece.measurement %></p>
-          <% end %>
-          
-          <p>Lugar: <%= @piece.place %></p>
-          <p>Fecha: <%= @piece.published_date.strftime("%Y") %></p>
+          <p><%= @piece.tech_spec %></p>
+          <p><%= @piece.measurement %></p>
+          <p><%= @piece.place %></p>
+          <p><%= @piece.published_date.strftime("%Y") %></p>
         </div>  
       </div>
 

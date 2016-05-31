@@ -5,6 +5,13 @@
   font-size: 16px;
 }
 
+.texts-titles{
+  background-color: $light-gray;
+  >p a{
+    color: #000;
+  } 
+}
+
 .all-texts{
   background-color: $light-gray;
   opacity: 0.95;
@@ -17,3 +24,4 @@
 .wrapper.no-background{
   background-color: transparent;
 }
+

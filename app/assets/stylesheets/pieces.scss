@@ -1,9 +1,5 @@
 @import 'colors.scss';
-#item-wrapper{
-  padding-top: 30px;
-  background-color: $silver;
-  height: 100%;
-}
+
 .carousel.slide{
   width: 100%;
   height: 550px;
@@ -35,12 +31,6 @@
 
 span.fa{
   margin-top: 275px;
-}
-
-.all-pieces{
-  h1{
-    color: $silver;
-  }
 }
 
 .index-tiles-wrapper{
@@ -133,18 +123,10 @@ span.fa{
   }
 }
 
-.all-pieces{
-  h1{
-    color: $silver;
-    text-align: center;
-    font-size: 36px;
-  }
-}
-
-
 .piece-wrapper{
   margin-top: 75px;
 }
+
 // .piece-overlay{
 //     width: 100%;
 //     height: 100%;

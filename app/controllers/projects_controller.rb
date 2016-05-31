@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
       end
       redirect_to admin_panel_path, notice: "Nuevo proyecto creado exitosamente!" 
     else
-      flash[:notice] = "Hubo un error al crear la proyecto."
+      flash[:notice] = "Hubo un error al crear la proyecto. Asegúrate que todos los campos estén llenos."
       render :new
     end
   end
@@ -59,7 +59,7 @@ class ProjectsController < ApplicationController
       end
       redirect_to admin_panel_path, notice: "Proyecto editado exitosamente!"
     else
-      flash[:notice] = "Hubo un problema con la edición de proyecto. Intenta nuevamente!"
+      flash[:notice] = "Hubo un problema con la edición de proyecto. Asegúrate que todos los campos estén llenos."
       render :edit
     end
     

@@ -34,7 +34,7 @@ class PiecesController < ApplicationController
       @piece = current_user.pieces.new
       @photo = @piece.photos.new
     else
-      flash[:notice] = "Tienes que ser un adminstrador para agregar obras!"
+      flash[:notice] = "Tienes que ser un administrador para agregar obras!"
       redirect_to root_path
     end 
   end
@@ -49,7 +49,7 @@ class PiecesController < ApplicationController
       end
       redirect_to admin_panel_path, notice: "Nuevo obra creada exitosamente!" 
     else
-      flash[:notice] = "Hubo un error al crear la obra."
+      flash[:notice] = "Hubo un error al crear la obra. Asegúrate que todos los campos estén llenos."
       render :new
     end
   end

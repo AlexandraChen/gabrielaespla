@@ -21,11 +21,12 @@ html, body {
   opacity: 0.5;
   position: fixed;
   bottom: 5em;
-  right: 100px;  
+  right: 10px;  
   display: none;
   text-indent: -9999px;
   background: url('sites/icon_top.png') no-repeat;
   background-size: 100%;
+  z-index: 99999;
 }
 
 .wrapper {

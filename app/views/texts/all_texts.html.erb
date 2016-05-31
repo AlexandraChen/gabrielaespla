@@ -1,9 +1,11 @@
 <div class="wrapper no-background">
  <div class="container">
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-2 texts-titles">
+      <h3> Textos </h3>
+      <hr>
       <% @texts.each do |text| %>
-        <%= link_to text.title, text_path(text.id)%>
+        <p><%= link_to text.title, text_path(text.id)%></p>
       <% end  %>      
     </div>
     <div class= "col-sm-8 all-texts">
