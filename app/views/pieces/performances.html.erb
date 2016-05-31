@@ -6,7 +6,7 @@
         <% @performances.each do |performance| %>
         <div class="box">
           <div class="panel-heading" id="img-wrapper">
-            <%= link_to performance.title, piece_path(performance.id), class:"project-overlay"  %>
+            <%= link_to "", piece_path(performance.id), class:"project-overlay"  %>
             <%= image_tag(performance.photos.first.img.url(:medium))%>
           </div>
           <div class="panel-body">
