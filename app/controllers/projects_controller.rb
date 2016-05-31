@@ -1,11 +1,11 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
   def all_projects
     @projects = Project.order("created_at DESC")
   end
   
   def show
-    @project = Project.find(params[:id])
   end
 
   def new
@@ -65,6 +65,11 @@ class ProjectsController < ApplicationController
     
   end
 
+  def destroy
+    @project.destroy
+    redirect_to admin_panel_path, notice: "Proyecto eliminado."
+  end
+
   private
   def project_params
     params.require(:project).permit(:title, :description, :published_date, :place, photos_attributes: [ :_destroy, img: [] ], photo_ids: [] )
@@ -74,5 +79,9 @@ class ProjectsController < ApplicationController
     #photo is inside :project
     photo_json = params[:project]
     params.require(:photo).permit(:img, :project_id)
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 end

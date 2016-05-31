@@ -8,7 +8,7 @@
         </div>
         <div class="panel-body admin-listing">
           <% @texts.each do |text| %>
-            <li><%= link_to text.title, text_path(text.id) %>| ID <%= text.id %> | <%= link_to "Editar texto", edit_text_path(text.id) %>
+            <li><%= link_to text.title, text_path(text.id) %>| ID <%= text.id %> | <%= link_to "Editar", edit_text_path(text.id) %>|  <%= link_to "Eliminar", text, method: :delete, data: {confirm: "¿Estás seguro que quieres eliminar este texto?"} %> 
             </li> <br>
           <% end %>
         </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="panel-body admin-listing">
           <% @pieces.each do |piece| %>
-            <li><%= link_to piece.title, piece_path(piece.id) %>| ID <%= piece.id %> | <%= link_to "Editar obra", edit_piece_path(piece.id) %>
+            <li><%= link_to piece.title, piece_path(piece.id) %>| ID <%= piece.id %> | <%= link_to "Editar", edit_piece_path(piece.id) %> |  <%= link_to "Eliminar", piece, method: :delete, data: {confirm: "¿Estás seguro que quieres eliminar esta obra?"} %> 
             </li> <br>
           <% end %>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="panel-body admin-listing">
           <% @projects.each do |project| %>
-            <li><%= link_to project.title, project_path(project.id) %>| ID <%= project.id %> | <%= link_to "Editar proyecto", edit_project_path(project.id) %>
+            <li><%= link_to project.title, project_path(project.id) %>| ID <%= project.id %> | <%= link_to "Editar", edit_project_path(project.id) %> |  <%= link_to "Eliminar", project, method: :delete, data: {confirm: "¿Estás seguro que quieres eliminar este proyecto?"} %> 
             </li> <br>
           <% end %>
         </div>

@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   get "/bio"                  => "sites#bio"
   get "/contactame"           => "sites#contact_me"       
 
-  resources :texts, except: [:destroy]
-  resources :photos, except: [:destroy]
-  resources :pieces, except: [:destroy]
-  resources :projects, except: [:destroy]
+  resources :texts
+  resources :photos
+  resources :pieces
+  resources :projects
   resources :contact_forms, only: [:new, :create]
 
 end

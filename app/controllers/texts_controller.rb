@@ -1,4 +1,6 @@
 class TextsController < ApplicationController
+  before_action :set_text, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
 
   def all_texts
     @texts = Text.order("created_at DESC")
@@ -44,10 +46,18 @@ class TextsController < ApplicationController
     flash[:notice] = "Hubo un problema con la edición de texto. Intenta nuevamente!"
     render :edit
   end
+  
+  def destroy
+    @text.destroy
+    redirect_to admin_panel_path, notice: "text eliminado."
+  end
 
   private
   def text_params
     params.require(:text).permit(:title, :content, :published_date, :place)
   end
 
+  def set_text
+    @text = Text.find(params[:id])
+  end
 end

@@ -1,11 +1,7 @@
 class PiecesController < ApplicationController
+  before_action :set_piece, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
   def all_pieces
-    # @pieces = Piece.order("created_at DESC")
-    # @drawing = Piece.where(piece_type:"Dibujo").order("created_at DESC")
-    # @performance = Piece.where(piece_type:"Performance").order("created_at DESC")
-    # @mural = Piece.where(piece_type:"Mural").order("created_at DESC")
-    # @painting = Piece.where(piece_type:"Pintura").order("created_at DESC")
     @pieces = Piece.order("created_at DESC")
     @drawing = Piece.where(piece_type:"Dibujo").first.photos.first
     @performance = Piece.where(piece_type:"Performance").first.photos.first
@@ -90,6 +86,11 @@ class PiecesController < ApplicationController
 
   end
 
+  def destroy
+    @piece.destroy
+    redirect_to admin_panel_path, notice: "Obra eliminada."
+  end
+
   private
   def piece_params
     params.require(:piece).permit(:title, :tech_spec, :measurement, :piece_type, :published_date, :place, photos_attributes: [ img: [] ], photo_ids: [])
@@ -99,5 +100,8 @@ class PiecesController < ApplicationController
     #photo is inside :piece
     photo_json = params[:piece]
     photo_json.require(:photo).permit(:img, :piece_id)
+  end
+  def set_piece
+    @piece = Piece.find(params[:id])
   end
 end
