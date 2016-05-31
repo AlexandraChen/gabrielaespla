@@ -11391,7 +11391,7 @@ button.close {
 }
 
 /* line 29, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/bootstrap_and_overrides.css.scss */
-.panel-default > #img-wrapper {
+div#img-wrapper {
   height: 250px;
   padding: 0;
 }
