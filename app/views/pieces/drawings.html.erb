@@ -4,15 +4,14 @@
      <div class= "piece-wrapper">
       <div id="pins" class="transitions-enabled">
         <% @drawings.each do |drawing| %>
-        <div class="box">
-          <div class="wrapper">
-
-            <%= link_to "", piece_path(drawing.id), class:"project-overlay"  %>
-            <%= image_tag(drawing.photos.first.img.url(:medium))%>
+        <div class="box panel panel-default" id="projects-box">
+            <div class="panel-heading" id="img-wrapper">
+              <%= link_to "", piece_path(drawing.id), class:"project-overlay"  %>
+              <%= image_tag(drawing.photos.first.img.url(:medium))%>
            </div>
-           <div class="panel-body">
+          <div class="panel-body">
               <p class="item-subtitle"> <%= drawing.title %> </p>
-            </div>
+          </div>
         </div>
         <% end %>
       </div>
