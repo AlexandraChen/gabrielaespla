@@ -3,10 +3,10 @@ class PiecesController < ApplicationController
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
   def all_pieces
     @pieces = Piece.order("created_at DESC")
-    @drawing = Piece.where(piece_type:"Dibujo").first.photos.first
-    @performance = Piece.where(piece_type:"Performance").first.photos.first
-    @mural = Piece.where(piece_type:"Mural").first.photos.first
-    @painting = Piece.where(piece_type:"Pintura").first.photos.first
+    @drawing = Photo.find(62)
+    @performance = Photo.find(28)
+    @mural = Photo.find(108)
+    @painting = Photo.find(161)
   end
   
   def drawings

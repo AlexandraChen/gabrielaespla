@@ -6,7 +6,7 @@ class SitesController < ApplicationController
   def index
     @pieces = Piece.order("created_at DESC")
     @project = Photo.find(141)
-    @piece = Photo.find(161)
+    @piece = Photo.find(162)
     @text = Photo.find(108)
     @bio = Piece.where(piece_type:"Pintura").first.photos.first
     @contact_form = ContactForm.new
