@@ -5,10 +5,10 @@ class SitesController < ApplicationController
 
   def index
     @pieces = Piece.order("created_at DESC")
-    @drawing = Piece.where(piece_type:"Dibujo").first.photos.first
-    @performance = Piece.where(piece_type:"Performance").first.photos.first
-    @mural = Piece.where(piece_type:"Mural").first.photos.first
-    @painting = Piece.where(piece_type:"Pintura").first.photos.first
+    @project = Photo.find(141)
+    @piece = Photo.find(161)
+    @text = Photo.find(108)
+    @bio = Piece.where(piece_type:"Pintura").first.photos.first
     @contact_form = ContactForm.new
   end
 
