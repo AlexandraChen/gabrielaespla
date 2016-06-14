@@ -7,8 +7,11 @@
 .text-wrapper{
   background-color: $light-gray;
   opacity: 0.9;
-  width: 100%;
-  padding: 50px;
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 25px;
   p{
     font-size: 20px;
