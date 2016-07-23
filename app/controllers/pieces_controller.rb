@@ -4,7 +4,7 @@ class PiecesController < ApplicationController
   def all_pieces
     @pieces = Piece.order("created_at DESC")
     @drawing = Photo.find(62)
-    @performance = Photo.find(28)
+    @performance = Photo.find(167)
     @mural = Photo.find(108)
     @painting = Photo.find(161)
   end
