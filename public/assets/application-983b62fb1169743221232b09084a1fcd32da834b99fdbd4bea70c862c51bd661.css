@@ -11554,7 +11554,7 @@ span.fa {
 /* line 108, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .piece-overlay {
   background-color: #eea097;
-  opacity: 0.9;
+  opacity: 0.5;
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -11571,14 +11571,15 @@ span.fa {
 .piece-overlay:hover {
   color: #fff;
   text-decoration: none;
+  opacity: 0.5;
 }
 
-/* line 127, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 128, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .piece-wrapper {
   margin-top: 75px;
 }
 
-/* line 131, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 132, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .performance-video {
   text-align: center;
   margin-bottom: 20px;
@@ -11589,7 +11590,7 @@ span.fa {
   height: 0;
 }
 
-/* line 140, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
+/* line 141, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/pieces.scss */
 .performance-video iframe {
   position: absolute;
   top: 0;
@@ -11637,7 +11638,7 @@ span.fa {
 /* line 37, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/projects.scss */
 .project-overlay {
   background-color: #eea097;
-  opacity: 0.9;
+  opacity: 0.5;
   position: absolute;
   z-index: 2;
   width: 100%;
