@@ -304,4 +304,13 @@ footer{
 }
 
 
+@media (max-width:500px){
+  .item-tiles >p{
+    font-size: 18px;
+  }
+  .say-hi{
+    font-size: 2em;
+  }
+}
+
 

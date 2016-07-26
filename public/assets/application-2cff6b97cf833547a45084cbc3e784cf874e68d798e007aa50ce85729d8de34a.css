@@ -12085,6 +12085,18 @@ footer .footer-links > div > ul > a {
 footer .footer-links > div > ul > a:hover {
   color: #bbb;
 }
+
+@media (max-width: 500px) {
+  /* line 308, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+  .item-tiles > p {
+    font-size: 18px;
+  }
+
+  /* line 311, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/sites.scss */
+  .say-hi {
+    font-size: 2em;
+  }
+}
 /* line 2, /Users/AlexandraChen1/gabrielaespla/app/assets/stylesheets/texts.scss */
 .text-content {
   text-align: justify;
