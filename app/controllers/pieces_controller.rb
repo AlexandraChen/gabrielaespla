@@ -2,11 +2,7 @@ class PiecesController < ApplicationController
   before_action :set_piece, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :only => [:new, :create, :edit, :update , :destroy]
   def all_pieces
-    @pieces = Piece.order("created_at DESC")
-    @drawing = Photo.find(62)
-    @performance = Photo.find(167)
-    @mural = Photo.find(108)
-    @painting = Photo.find(161)
+
   end
   
   def drawings

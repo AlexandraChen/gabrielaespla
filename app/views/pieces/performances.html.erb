@@ -4,7 +4,7 @@
      <div class= "piece-wrapper">
       <div id="pins" class="transitions-enabled">
         <% @performances.each do |performance| %>
-        <div class="box">
+        <div class="box panel panel-default" id="projects-box">
           <div class="panel-heading" id="img-wrapper">
             <%= link_to "", piece_path(performance.id), class:"project-overlay"  %>
             <%= image_tag(performance.photos.first.img.url(:medium))%>
