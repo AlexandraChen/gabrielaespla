@@ -6,19 +6,19 @@ class PiecesController < ApplicationController
   end
   
   def drawings
-    @drawings = Piece.where(piece_type:"Dibujo")
+    @drawings = Piece.where(piece_type:"Dibujo").order(published_date: :asc)
   end
 
   def murals
-    @murals = Piece.where(piece_type:"Mural")
+    @murals = Piece.where(piece_type:"Mural").order(published_date: :asc)
   end
 
   def performances
-    @performances = Piece.where(piece_type:"Performance")
+    @performances = Piece.where(piece_type:"Performance").order(published_date: :asc)
   end
 
   def paintings
-    @paintings = Piece.where(piece_type:"Pintura")
+    @paintings = Piece.where(piece_type:"Pintura").order(published_date: :asc)
   end
 
   def show
